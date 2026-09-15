@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+/*
+    EJERCICIO 1
+let nombre = prompt("Dime tu nombre")
+let edad = prompt("Dime tu edad")
+let profesion = prompt("Dime profesion")
+console.log(nombre, edad, profesion);
+*/
+
+
+
+/*
+    EJERCICIO 2
+let numero = prompt("Dime un numero")
+paroimpar(numero)
+function paroimpar(numero) {
+    if (numero % 2 == 0){
+        console.log(numero + " es par");
+    } else {
+        console.log(numero + " es impar");
+        
+    }
+}
+
+*/
+
+/*
+
+    EJERCICIO 3
+function tablaMult() {
+    for (let i = 1; i <= 10; i++) {
+        console.log("TABLA MULTIPLICAR DEL " + i);
+        for (let j = 0; j <= 10; j++) {
+            console.log(i + "*" + j + "=" + (i*j));
+        }
+    }
+}
+tablaMult();
+*/
+
+/* EJERCICIO 4
+let num1 = parseInt(prompt("Dime el primer numero"))
+let num2 = parseInt(prompt("Dime el segundo numero"))
+ej4(num1, num2);
+function ej4(num1, num2) {
+    let op = prompt("Que operacion desea realizar?? (+, -, *, /)")
+    switch (op) {
+        case "+":
+            console.log(num1 + " + " + num2 + " = " + (num1+num2));
+            break;
+        
+        case "-":
+            console.log(num1 + " - " + num2 + " = " + (num1-num2));
+            break;
+
+        case "*":
+            console.log(num1 + " * " + num2 + " = " + (num1*num2));
+            break;
+
+        case "/":
+            console.log(num1 + " / " + num2 + " = " + (num1/num2));
+            break;
+
+        default:
+            console.log("Has indicado un caracter invalido, abortando...");
+            break;
+    }
+}
+*/
+
+ 
+/*
+        EJERCICIO 5
+let num1 = parseInt(prompt("Dime el primer numero"))
+let num2 = parseInt(prompt("Dime el segundo numero"))
+console.log(Math.max(num1, num2));
+
+*/
+
+
+/*
+    EJERCICIO 6
+let num = parseInt(prompt("Dime un numero"))
+let cuenta = 1
+for (let i = num; i > 0 ; i--) {
+    cuenta = cuenta*i;
+}
+console.log(cuenta);
+*/
+
+let num = parseInt(prompt("Adivina un numero"))
+let miNumero = 67
+
+while (num != miNumero) {
+    num = parseInt(prompt("Adivina un numero"))
+}
+console.log("ADIVINADO!!!");
+
+
+
+</script>
+</html>
