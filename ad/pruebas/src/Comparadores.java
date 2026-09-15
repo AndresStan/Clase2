@@ -12,7 +12,7 @@ public class Comparadores {
         list.add(new Student(2, "Billy"));
 
         System.out.println(list);
-        Collections.sort(list);
+
         System.out.println(list);
 
 
