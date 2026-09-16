@@ -1,3 +1,5 @@
+package comparatorComparable;
+
 public class Coche implements Comparable {
 
     String matricula;
@@ -14,7 +16,7 @@ public class Coche implements Comparable {
 
     @Override
     public String toString() {
-        return "Coche{" +
+        return "comparatorComparable.Coche{" +
                 "matricula='" + matricula + '\'' +
                 ", vin='" + vin + '\'' +
                 ", owner='" + owner + '\'' +

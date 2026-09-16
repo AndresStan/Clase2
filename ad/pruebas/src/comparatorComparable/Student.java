@@ -1,3 +1,5 @@
+package comparatorComparable;
+
 public class Student {
 
     int id;

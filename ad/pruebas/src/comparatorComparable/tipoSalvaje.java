@@ -1,3 +1,5 @@
+package comparatorComparable;
+
 import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,7 +25,7 @@ public class tipoSalvaje {
         imprimir(caja2);
         imprimirConMultiplicador(caja2, 3);
 
-        List<String> miLista = new ArrayList<>(Arrays.asList("Coche", "Casa", "Persona", "Movil"));
+        List<String> miLista = new ArrayList<>(Arrays.asList("comparatorComparable.Coche", "Casa", "Persona", "Movil"));
         System.out.println(miLista.stream().sorted().toList());
 
         Coche coche1 = new Coche("9442 RAD", "ASD4GF3423R", "Hector Stan", 455);
