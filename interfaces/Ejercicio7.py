@@ -1,38 +1,38 @@
 from PyQt6.QtCore import QSize, Qt
 from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton
 
-class MainWindow(QMainWindow): # Asi se crea una clase
-
+class MainWindow(QMainWindow): # Creación de una clase
     
+    cont = 0
     
-
-    
-    def __init__(self): # Asi se crea una funcion
-        super().__init__() # Siempre se pone asi para crear la funcion dentro de una clase (se llamara nada mas llamar a la clase)
-        self.botonpulsado = True
-        self.setWindowTitle("MiTitulo")
-
-
-
+    def __init__(self): # Creación de una función
+        super().__init__() # LLamo al constructor del padre
+        
+        self.setWindowTitle("Mi aplicación")
+        
         boton = QPushButton("Pulsa")
-        boton.setCheckable(True)
-        boton.clicked.connect(self.botonActivado) # Denominado SIGNAL
-        boton.setChecked(self.botonpulsado)
+        
+        self.botonPulsado = False
+        boton.setCheckable(True) 
+        boton.clicked.connect(self.botonActivado)
+        boton.setChecked(self.botonPulsado) # Esto pone si el estado inicial del botón está checked o no
+        # boton.released
+        
+        
+        self.setFixedSize(QSize(200,200)) # Tamaño fijo de la ventana
+        
+        self.setCentralWidget(boton) # Meto el botón
 
+    def botonActivado(self,checked):
+            self.botonPulsado = checked
+            print(self.botonPulsado)
+            
+    def saberEstado(self, checked):
+        print("¿Botón pulsado?", checked)
+                    
 
-
-        self.setCentralWidget(boton)
-
-    def botonActivado(self, checked):
-        self.botonpulsado=checked
-        print(self.botonpulsado)
 
 app = QApplication([])
-
 window = MainWindow()
-
 window.show()
-
-
-
-app.exec() # Poner siempre si no la ventana se cierra instant
+app.exec()
