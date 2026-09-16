@@ -111,6 +111,145 @@ while (num != miNumero) {
 console.log("ADIVINADO!!!");
 */
 
+/* 
+    EJERCICIO 8
+let linea = "";
+for (let i = 1; i <= 5; i++) {
+   for (let j = 1; j <=i; j++){
+    linea += i;
+   }
+   console.log(linea);
+   linea = ""
+ 
+    
+}
+*/
+
+/*
+    EJERCICIO 9
+let respuesta = prompt("Dime el personaje").toLowerCase()
+let sw = ["c3po", "r2", "vader", "luck"]
+if (sw.includes(respuesta)) {
+    console.log("Es un personaje de Star Wars");
+} else {
+    console.log("No es un personaje de Star Wars");
+    
+}
+
+*/
+
+/*
+    EJERCICIO 10
+let nombre = prompt("Dime tu nombre")
+let edad = prompt("Dime tu edad")
+let diasemana = prompt("Dime el dia de la semana que quieres viajar (Lunes, Martes, Miercoles...)")
+let descuento = 1
+const precio = 12.5
+if (edad >= 18 && edad<= 26) {
+     console.log("Descuento de edad 18-26 aplicado");
+     descuento = 0.85
+} else{
+    if (edad >= 60){
+        console.log("Descuento de edad +60 aplicado");
+        descuento = 0.85
+    }
+}
+
+if (diasemana.toLowerCase() == "miercoles" || diasemana.toLowerCase() == "viernes") {
+    descuento-=0.05
+    console.log("Descuento de dia de la semana miercoles-viernes aplicado (" + diasemana + ")");
+}
+
+console.log("Precio sin iva: " + precio*descuento + "€");
+console.log("Precio con iva 21%: " + (precio*descuento)*1.21 + "€");
+*/
+
+
+/*
+    EJERCICIO 11
+let correcto = false;
+    let numero = parseInt(prompt("Dime un numero"))
+while (!correcto) {
+    if( Number.isInteger(numero)){
+        correcto=true
+    } else {
+        numero = parseInt(prompt("Dime un numero valido"))
+    }
+}
+
+console.log(numero);
+
+*/
+
+/*
+    EJERCICIO 12
+alert(`Hola mundo! Que facil es incluir 'comillas simples' y "comillas simples"`)
+*/
+
+
+let numero = parseInt(prompt("Dime un numero"))
+let sacado = false
+let imparMascercano
+
+// saco el impar bajo mas cercano a el numero
+    if (numero%2 == 0) {
+        imparMascercano = numero-1;
+    } else {
+        imparMascercano = numero;
+    }
+
+
+
+let numeroMitad = Math.ceil(imparMascercano/2)
+let linea = ""
+
+
+for (let a = 1; a<=imparMascercano; a=a+2) {
+   
+    let numeroEmpezarADibujar = Math.ceil(imparMascercano/2)-(Math.floor(a/2))
+    let numeroTerminarDeDibujar = numeroEmpezarADibujar+a
+    
+        for (let i = 1; i <= imparMascercano; i++) {
+        if (i < numeroEmpezarADibujar) {
+                linea+="*"
+        } 
+        if (i >= numeroEmpezarADibujar && i < numeroTerminarDeDibujar){
+                linea+=a
+        }
+        if (i >= numeroTerminarDeDibujar){
+                linea+="*"
+        }
+        }
+
+        console.log(linea);
+        linea = ""
+}
+
+// Añadido extra Andres (Para pintar rombo completo)
+
+
+for (let a = imparMascercano-2; a>=1; a=a-2) {
+   
+    let numeroEmpezarADibujar = Math.ceil(imparMascercano/2)-(Math.floor(a/2))
+    let numeroTerminarDeDibujar = numeroEmpezarADibujar+a
+    
+        for (let i = 1; i <= imparMascercano; i++) {
+        if (i < numeroEmpezarADibujar) {
+                linea+="*"
+        } 
+        if (i >= numeroEmpezarADibujar && i < numeroTerminarDeDibujar){
+                linea+=a
+        }
+        if (i >= numeroTerminarDeDibujar){
+                linea+="*"
+        }
+        }
+
+        console.log(linea);
+        linea = ""
+}
+
+
 
 </script>
 </html>
