@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">EdadCanina</string>
+    <string name="app_name">Dog Age</string>
+    <string name="por_ejemplo_18_o_75">For example 18 or 75</string>
+    <string name="que_edad_tienes">¿How old are you?</string>
+    <string name="calcular">Calculate</string>
+    <string name="texto_toast">Say something bruh</string>
+    <string name="textoRespuesta">If you were a dog, you would be %d years old</string>
 </resources>
