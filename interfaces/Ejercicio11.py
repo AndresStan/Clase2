@@ -17,21 +17,13 @@ class MainWindow(QMainWindow): # Asi se crea una clase
         self.setCentralWidget(self.boton)
 
     def botonpulsadoYsoltado(self, pulsado):
-             self.boton.setText(["No pulsado" , "pulsado"][pulsado])
+             self.boton.setText([f"No pulsado {self.cont} " , f"pulsado{self.cont}"][pulsado])
+             self.cont +=1
        
            
-        
-        
-        
-        
-
-
 app = QApplication([])
-
 window = MainWindow()
-
 window.show()
-
 
 
 app.exec() # Poner siempre si no la ventana se cierra instant
