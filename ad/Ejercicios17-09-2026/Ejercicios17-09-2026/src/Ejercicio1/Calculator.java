@@ -1,8 +1,8 @@
 package Ejercicio1;
 
+@FunctionalInterface
 public interface Calculator {
 
-    static int calculate(int a1, int a2){
+   int calculate(int a, int b);
 
-    }
 }
