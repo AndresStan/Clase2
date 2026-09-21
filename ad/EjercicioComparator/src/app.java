@@ -55,9 +55,9 @@ public class app {
         listaPacientes.add(new Paciente("Héctor", 9, LocalDateTime.parse("2026-09-16T10:30")));
 
 
-        atenderPacientes(listaPacientes);
+       // atenderPacientes(listaPacientes);
         mostrarColaCompleta(listaPacientes);
-        mostrarOrdenReal(listaPacientes);
+       // mostrarOrdenReal(listaPacientes);
 
 
     }

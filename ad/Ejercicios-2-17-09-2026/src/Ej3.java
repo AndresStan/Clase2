@@ -9,6 +9,8 @@ public class Ej3 {
         List<Integer> miLista = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9));
 
         Function<Integer, Integer> function = a -> a*a*a;
+
+
         System.out.println(miLista.stream().map(function).toList());
 
 

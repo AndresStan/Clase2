@@ -42,4 +42,5 @@ public class Persona implements Comparable<Persona> {
     public int compareTo(Persona o) {
         return o.getEdad() - this.getEdad();
     }
+
 }
