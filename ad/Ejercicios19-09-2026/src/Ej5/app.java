@@ -71,7 +71,9 @@ public class app {
 
         Map<String, List<String>> j1 = miLista.stream().filter(filtroF).collect(Collectors.groupingBy(agruparPorDepartamento, Collectors.mapping(Empleado::getNombre, Collectors.toList())));
         Map<String, List<String>> j2 = j1.entrySet().stream().filter(filtroMayor1).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-        System.out.println(j2);
+        j2.forEach((key, value) -> System.out.println("Departamento: " + key + ", Empleados: " + value));
+
+
         
         
     }
