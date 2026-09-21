@@ -2,7 +2,10 @@ package Ej5;
 
 import Ej4.Persona;
 
+import java.security.KeyStore.Entry;
 import java.util.*;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -18,31 +21,59 @@ public class app {
                 new Empleado("Emmanuel", "Informatica"),
                 new Empleado("Julia", "Filosofía"),
                 new Empleado("Sara", "Psicología"),
-                new Empleado("Angel", "Terreno")
+                new Empleado("Angel", "Terreno"),
+                new Empleado("Pepe", "Geografía"),
+                new Empleado("Antonio", "Filología")
 
         ));
 
-        // Apartado 1
-        Map<String, List<Empleado>> agrupacionPorDepartamento = miLista.stream().collect(Collectors.groupingBy(Empleado::getDepartamento));
-        System.out.println(agrupacionPorDepartamento);
+        
+        // Ap1
+        Map<String, List<Empleado>> ap1 = miLista.stream().collect(Collectors.groupingBy(Empleado::getDepartamento));
+        System.out.println(ap1);
 
-        // Apartado 2
-        Map<String, Long> cuentaPorDepartamento = miLista.stream().collect(Collectors.groupingBy(Empleado::getDepartamento, Collectors.counting()));
-        System.out.println(cuentaPorDepartamento);
+      
+        System.out.println("--------------------------------------");
+        
+        // Ap2
+        Map<String, Long> ap2 = miLista.stream().collect(Collectors.groupingBy(Empleado::getDepartamento, Collectors.counting()));
+        System.out.println(ap2);
 
-        // Apartado 3
-        String departamento = "Informatica";
-        Map<String, List<Empleado>> empleadosPorDepartamento = miLista.stream().filter(s -> Objects.equals(s.getDepartamento(), departamento)).collect(Collectors.groupingBy(Empleado::getDepartamento));
-        System.out.println(empleadosPorDepartamento);
+        System.out.println("--------------------------------------");
+        // Ap3
 
-        // Apartado 4 En forma de map (inconveniente porque pueden repetirse los nombre y daria error al haber dos claves iguales)
-        String nombre = "Angel";
-        Map<String, List<String>> departamentoPorNombre = miLista.stream().filter(s -> Objects.equals(s.getNombre(), nombre)).collect(Collectors.groupingBy(Empleado::getNombre, Collectors.mapping(Empleado::getDepartamento, Collectors.toList())));
-        System.out.println(departamentoPorNombre);
+        String nombreDep = "Filosofía";
+        Map<String, List<Empleado>> ap3 = miLista.stream().filter(n -> n.getDepartamento() == nombreDep).collect(Collectors.groupingBy(Empleado::getDepartamento));
+        System.out.println(ap3);
+        System.out.println("--------------------------------------");
 
-        // Apartado 4 en forma "mejor" ya que muestra solo los departamentos
-        String nombre = "Angel";
-        miLista.stream().filter(s -> Objects.equals(s.getNombre(), nombre)).map(Empleado::getDepartamento).forEach(System.out::println);
+        // Ap4
+        String empleado = "Angel";
+        Map<String, List<String>> ap4 = miLista.stream().filter(s -> s.getNombre() == empleado)
+        .collect(Collectors.groupingBy(Empleado::getNombre, Collectors.mapping(Empleado::getDepartamento, Collectors.toList())));
+        System.out.println(ap4);
+
+        
+        System.out.println("--------------------------------------");
+
+        // Mostrar los nombres de los departamentos con sus empleados solo nombres en los que haya mas de una persona
+        Map<String, List<String>> sara1 = miLista.stream().collect(Collectors.groupingBy(Empleado::getDepartamento, Collectors.mapping(Empleado::getNombre, Collectors.toList())));
+        Map<String, List<String>> sara2 = sara1.entrySet().stream().filter(k -> k.getValue().size() > 1).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        System.out.println(sara2);
+
+        System.out.println("--------------------------------------");
+
+        // Mostrar nombres agrupado por departamento y filtrar los departamentos que tengan mas de un empleado y su departamento empiece por F (Con predicados y cosas predefinidas)
+
+        Predicate<Empleado> filtroF = s -> s.getDepartamento().startsWith("F");
+        Function<Empleado, String> agruparPorDepartamento = e -> e.getDepartamento();
+        Predicate<Map.Entry<String, List<String>>> filtroMayor1 = s -> s.getValue().size() > 1;
+
+        Map<String, List<String>> j1 = miLista.stream().filter(filtroF).collect(Collectors.groupingBy(agruparPorDepartamento, Collectors.mapping(Empleado::getNombre, Collectors.toList())));
+        Map<String, List<String>> j2 = j1.entrySet().stream().filter(filtroMayor1).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+        System.out.println(j2);
+        
+        
     }
 
 }
