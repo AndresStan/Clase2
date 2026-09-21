@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+</body>
+<script>
+    
+    
+    //1. Crea un script en el que se pida al usuario un vector de números enteros e indique en
+    //pantalla la media aritmética de todos sus elementos. Para parar la introducción de número, teclea un 0.
+
+    /*
+    var vector = []
+    while (true) {
+     var num = parseInt(prompt("Indica el numero a añadir o 0 para salir"))
+     if (num === 0){
+        break
+     } else {
+        vector.push(num)
+     }
+    }
+    alert(vector.reduce((ac, sum) => ac+sum) / vector.length)
+
+    */
+
+    // 2. El cálculo de la letra del Documento Nacional de Identidad (DNI) 
+    // es un proceso matemático sencillo que se basa en obtener el resto de
+    //  la división entera del número de DNI y el número
+    // 23. Si el resto es 0 será la letra ‘T’, si es 1 la letra ‘R’, etc.
+    //  Se adjunta el array con las letras correspondientes a los restos.
+    // var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X',
+    //  'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E',
+    // 'T']; 
+
+    /*
+     var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E','T']; 
+     var dni = (prompt("Indica el dni con letra"))
+     var dniLetra = dni.charAt(8)
+     console.log(dniLetra);
+
+     var numeroDni = parseInt(dni.slice(0, 8))
+     var resto = numeroDni%23
+     if (letras[resto] == dniLetra.toUpperCase()) {
+        alert("El dni es correcto")
+     } else {
+        alert("El dni es incorrecto")
+     }
+     */
+
+
+     // 3. Dado el siguiente array: [4,0,3,4,7,3,5,8,1,8,8,0,2,3,1,2,5,7,3,2,5,1]. 
+     // Genera un nuevo
+     // array con los elementos originales sin repetir y ordenado. 
+     /*
+     var array = [4,0,3,4,7,3,5,8,1,8,8,0,2,3,1,2,5,7,3,2,5,1]
+    var arrayOrdenado = new Set(array.sort(( a , b ) => a - b ))
+     alert([...arrayOrdenado])
+    */
+
+     // 4. Genera un array con los siguientes nombres: Julián, Rodrigo, Mateo, Valdomero. Haz
+     // una ordenación de los mismos en orden normal e inverso. 
+    /*
+     var nombres = ["Julián", "Rodrigo", "Mateo", "Valdomero"]
+     console.log( "Nombres ordenados" , nombres.sort());
+     console.log( "Nombres ordenados al reves" , nombres.sort().reverse())
+     */
+
+     
+     
+
+
+</script>
+</html>
