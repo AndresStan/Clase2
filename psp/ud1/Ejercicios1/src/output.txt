@@ -1,0 +1,18 @@
+
+C:\Users\andres\Desktop\Clase2\psp\ud1\Ejercicios1>ping www.dam2chomon.org 
+Ping request could not find host www.dam2chomon.org. Please check the name and try again.
+
+C:\Users\andres\Desktop\Clase2\psp\ud1\Ejercicios1>ping www.google.es 
+
+Pinging www.google.es [172.217.171.35] with 32 bytes of data:
+Reply from 172.217.171.35: bytes=32 time=13ms TTL=116
+Reply from 172.217.171.35: bytes=32 time=13ms TTL=116
+Reply from 172.217.171.35: bytes=32 time=13ms TTL=116
+Reply from 172.217.171.35: bytes=32 time=13ms TTL=116
+
+Ping statistics for 172.217.171.35:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 13ms, Maximum = 13ms, Average = 13ms
+
+C:\Users\andres\Desktop\Clase2\psp\ud1\Ejercicios1>pring www.iesch.org 
