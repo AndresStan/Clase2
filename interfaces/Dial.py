@@ -1,5 +1,5 @@
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel, QLineEdit, QVBoxLayout, QWidget, QCheckBox, QDoubleSpinBox, QSpinBox, QSlider
+from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel, QLineEdit, QVBoxLayout, QWidget, QCheckBox, QDoubleSpinBox, QSpinBox, QSlider, QDial
 
 class MainWindow(QMainWindow): # Asi se crea una clase
 
@@ -9,15 +9,16 @@ class MainWindow(QMainWindow): # Asi se crea una clase
         super().__init__() # Siempre se pone asi para crear la funcion dentro de una clase (se llamara nada mas llamar a la clase)
         self.setWindowTitle("MiAplicacion")
 
-        slider = QSlider()
-        slider.setRange(0, 100) #  Para poner rango
-        slider.setOrientation(Qt.Orientation.Horizontal) # Para poner la orientacion a horizontal
+        dial = QDial()
+        dial.setRange(0, 100) #  Para poner rango
+        dial.setNotchesVisible = True # Para mostrar las lineas de pista
+        
         
        
-        slider.valueChanged.connect(self.valorcambiado)
-        slider.sliderMoved.connect(self.sliderTocado)
+        dial.valueChanged.connect(self.valorcambiado)
+        dial.sliderMoved.connect(self.sliderTocado)
         
-        self.setCentralWidget(slider)
+        self.setCentralWidget(dial)
         
             
 
