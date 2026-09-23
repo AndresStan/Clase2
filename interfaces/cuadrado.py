@@ -6,7 +6,7 @@ class Color(QWidget):
         super().__init__()
 
         self.setAutoFillBackground(True)
-        
+
         paleta=self.palette()
         paleta.setColor(QPalette.ColorRole.Window, QColor(color))
         self.setPalette(paleta)
