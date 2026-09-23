@@ -20,7 +20,9 @@ class MainWindow(QMainWindow): # Asi se crea una clase
         self.setCentralWidget(casilla)
 
     def muestraestado(self, s):
-        print(s) # 0 es no marcado, 1 es parcialmente marcado , 2 es marcado
+        print(["Desmarcado", "", "Marcado"][s]) # 0 es no marcado, 1 es parcialmente marcado (CASI NUNCA VAMOS A VER ESTO EN EL MUNDO REAL), 2 es marcado
+       
+        
     
 
     
