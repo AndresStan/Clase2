@@ -1,0 +1,5 @@
+Producto{id=1, nombre='Portátil Asus ZenBook', precio=899.99, descuento=true, tipo=E}
+Producto{id=2, nombre='Monitor LG 27', precio=199.5, descuento=false, tipo=E}
+Producto{id=3, nombre='Camiseta Algodón M', precio=15.99, descuento=true, tipo=R}
+Producto{id=4, nombre='Leche Desnatada 1L', precio=1.05, descuento=false, tipo=A}
+Producto{id=5, nombre='Cafetera Express', precio=79.9, descuento=false, tipo=E}
