@@ -1,6 +1,6 @@
 from PyQt6.QtCore import Qt
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel, QLineEdit, QVBoxLayout, QWidget, QCheckBox, QDoubleSpinBox, QSpinBox, QSlider, QDial, QCalendarWidget, QHBoxLayout
-from cuadrado import Color
+from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel, QLineEdit, QVBoxLayout, QWidget, QCheckBox, QDoubleSpinBox, QSpinBox, QSlider, QDial, QCalendarWidget, QVBoxLayout
+from Color import Color
 
 class MainWindow(QMainWindow): # Asi se crea una clase
 
@@ -9,7 +9,7 @@ class MainWindow(QMainWindow): # Asi se crea una clase
     def __init__(self): # Asi se crea una funcio 
         super().__init__() # Siempre se pone asi para crear la funcion dentro de una clase (se llamara nada mas llamar a la clase)
         self.setWindowTitle("MiAplicacion")
-        plantilla = QHBoxLayout()
+        plantilla = QVBoxLayout() # Para plantilla vertical, para horizonta es QHBoxLayout
 
 
         plantilla.addWidget(Color("red"))        
