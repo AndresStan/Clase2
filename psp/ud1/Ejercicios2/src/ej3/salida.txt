@@ -1,0 +1,54 @@
+Microsoft Windows [Version 10.0.19045.7725]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\andres\Desktop\Clase2\psp\ud1\Ejercicios2>@echo off
+cls
+echo Comenzando ejecuci贸n
+Comenzando ejecuci贸n
+date /t
+24/09/2026 
+time /t
+23:15
+dir
+ Volume in drive C has no label.
+ Volume Serial Number is A0C9-1E7A
+
+ Directory of C:\Users\andres\Desktop\Clase2\psp\ud1\Ejercicios2
+
+24/09/2026  22:53    <DIR>          .
+24/09/2026  22:53    <DIR>          ..
+24/09/2026  22:41               381 .gitignore
+24/09/2026  23:13    <DIR>          .idea
+24/09/2026  22:41               433 Ejercicios2.iml
+24/09/2026  22:53    <DIR>          out
+24/09/2026  22:54    <DIR>          src
+               2 File(s)            814 bytes
+               5 Dir(s)  103.634.444.288 bytes free
+ipconfig
+
+Windows IP Configuration
+
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . : 
+   Link-local IPv6 Address . . . . . : fe80::fad6:fabe:90a5:e36b%13
+   IPv4 Address. . . . . . . . . . . : 192.168.1.35
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::1%13
+                                       192.168.1.1
+
+Ethernet adapter Ethernet 2:
+
+   Connection-specific DNS Suffix  . : 
+   Link-local IPv6 Address . . . . . : fe80::922e:70fa:bbe4:3fef%17
+   IPv4 Address. . . . . . . . . . . : 192.168.56.1
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 
+
+Ethernet adapter Conexi de red Bluetooth:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+echo Fin de la ejecuci贸n
+Fin de la ejecuci贸n

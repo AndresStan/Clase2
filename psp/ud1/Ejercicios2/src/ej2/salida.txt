@@ -1,0 +1,19 @@
+Usuario actual: 
+desktop-t3v0212\andres
+Directorio actual: 
+C:\Users\andres\Desktop\Clase2\psp\ud1\Ejercicios2
+Contenido del directorio: 
+ Volume in drive C has no label.
+ Volume Serial Number is A0C9-1E7A
+
+ Directory of C:\Users\andres\Desktop\Clase2\psp\ud1\Ejercicios2
+
+24/09/2026  22:53    <DIR>          .
+24/09/2026  22:53    <DIR>          ..
+24/09/2026  22:41               381 .gitignore
+24/09/2026  22:53    <DIR>          .idea
+24/09/2026  22:41               433 Ejercicios2.iml
+24/09/2026  22:53    <DIR>          out
+24/09/2026  22:41    <DIR>          src
+               2 File(s)            814 bytes
+               5 Dir(s)  103.566.561.280 bytes free
