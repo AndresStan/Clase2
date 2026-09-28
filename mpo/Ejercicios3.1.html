@@ -226,8 +226,72 @@
       document.write("El correo no es valido")
    }
    */
-
+   
+   
+   /* 
+   
+   7. Crear un script que solicite una cadena y diga si es palíndromo, es decir, se escribe igual
+de derecha a izquierda y de izquierda a derecha.
+Ejemplo de palíndromo: Allí ves Sevilla.
+   
+   
   
+   var cadena = prompt("Indica la frase y te digo si es palindroma o no").trim().replaceAll(" ","").replaceAll(",","")
+   console.log(cadena);
+
+   var es = true
+   var contador = 0
+   for (let i = cadena.length-1; i >= 0; i--) {
+      console.log(cadena[i]);
+      if (cadena[contador] == cadena[i]) {
+         
+      } else {
+         es = false;
+      }
+      contador++
+   }
+
+   if (es) {
+      document.write("Es palindroma")
+   } else{
+      document.write("No es palindroma")
+   }
+
+   */
+
+   /* 
+   
+   8 Crear un script que solicite el nombre y apellidos de una persona (en una sola vez) y
+luego los muestre como “apellidos, nombre”. 
+   
+
+      var nombreYapellidos = prompt("Indica tu nombre y apellidos").trim()
+      var regex = "^([a-zA-ZàèìòùÀÈÌÒÙ]+)\\s([a-zA-ZàèìòùÀÈÌÒÙ\\s]+)$"
+   
+      console.log(nombreYapellidos.match(regex))
+      document.write(nombreYapellidos.match(regex)[2] + ", " + nombreYapellidos.match(regex)[1])
+  
+ */
+  /*
+  9. Crear un script que solicite una frase y convierta a mayúsculas la primera letra de cada
+palabra y a minúsculas el resto. 
+  */
+
+   var frase = prompt("Indica una frase")
+   var fraseSeparada = frase.split(" ");
+   fraseSeparada.forEach(a => {
+      for (let i = 0; i <= a.length-1; i++) {
+         if (i==0) {
+              a[0] = a[0].toUpperCase();
+         } else{
+             a[i] = a[i].toLowerCase();
+         }
+      }
+   });
+   console.log(fraseSeparada.toString())
+ 
+
+ 
 </script>
 
 </html>

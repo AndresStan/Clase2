@@ -70,7 +70,7 @@ public class app {
         Predicate<Map.Entry<String, List<String>>> filtroMayor1 = s -> s.getValue().size() > 1;
 
         Map<String, List<String>> j1 = miLista.stream().filter(filtroF).collect(Collectors.groupingBy(agruparPorDepartamento, Collectors.mapping(Empleado::getNombre, Collectors.toList())));
-        Map<String, List<String>> j2 = j1.entrySet().stream().filter(filtroMayor1).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+            Map<String, List<String>> j2 = j1.entrySet().stream().filter(filtroMayor1).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
         j2.forEach((key, value) -> System.out.println("Departamento: " + key + ", Empleados: " + value));
 
 
