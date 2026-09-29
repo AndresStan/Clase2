@@ -275,23 +275,86 @@ luego los muestre como “apellidos, nombre”.
   /*
   9. Crear un script que solicite una frase y convierta a mayúsculas la primera letra de cada
 palabra y a minúsculas el resto. 
+
+
+   var frase = prompt("Indica una frase").toLowerCase()
+   var fraseSeparada = frase.split(" ");
+   console.log(fraseSeparada.map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(" "))
+
   */
 
-   var frase = prompt("Indica una frase")
-   var fraseSeparada = frase.split(" ");
-   fraseSeparada.forEach(a => {
-      for (let i = 0; i <= a.length-1; i++) {
-         if (i==0) {
-              a[0] = a[0].toUpperCase();
-         } else{
-             a[i] = a[i].toLowerCase();
-         }
-      }
-   });
-   console.log(fraseSeparada.toString())
- 
+   /*
+   10.	Crear un script que compruebe una fecha en formato
+    dd-mm-aaaa es correcta. No uses un objeto Date.
 
- 
+
+   var fechaUsuario = prompt("Dame la fecha y te digo si es correcto en formato dd-MM-aaaa")
+
+   var regex = /^\d{1,2}-\d{1,2}-\d{1,4}$/
+   console.log(fechaUsuario.match(regex) != null)
+     */
+
+   /*
+   11.	 Calcula el tiempo transcurrido entre la pulsación de
+   dos botones rotulados “Empezar a contar”, “Finalizar”.
+
+
+   var fecha
+   var fechaA
+
+
+   function empezar(){
+      console.log("Empezar")
+      fecha = new Date();
+
+
+   }
+
+   var diferencia;
+
+
+   function acabar(){
+      console.log("Parar")
+      fechaA = new Date();
+      diferencia = fechaA - fecha
+      document.write(`${diferencia/1000} segundos`)
+   }
+
+   document.write("<button onClick='empezar()' >Empezar a contar</button> <br> <br>")
+   document.write("<button onClick='acabar()' >Parar el Contador</button>")
+
+   */
+
+
+
+   /*
+   12.	Crea un script en el que se pida la fecha de nacimiento y
+    devuelva la fecha en formato: dd-mm-aaaa, es decir, 26-11-2015.
+    */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 </html>
