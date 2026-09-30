@@ -5,7 +5,9 @@ plugins {
 android {
     namespace = "org.iesch.dashboard"
     compileSdk {
-        version = release(37)
+        version = release(36) {
+            minorApiLevel = 1
+        }
     }
 
     defaultConfig {
