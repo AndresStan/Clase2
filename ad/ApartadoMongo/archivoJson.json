@@ -1,0 +1,15 @@
+{
+	titulo:"Receta de ...",
+	ingredientes:
+		[
+			{peso:"100ml", nombre:"aceite"},
+			{peso:"500g", nombre:"azucar"}
+		],
+	realizacion:"asdasdasdasdasd",
+	comentarios:
+		[
+			{autor:"pepe", texto:"asdasdas"},
+			{autor:"Andres", texto:"asdasdasdasdasd"}
+		]
+}
+
