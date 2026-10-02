@@ -29,8 +29,7 @@ class MainWindow(QMainWindow): # Asi se crea una clase
         vertical.addWidget(casilla)
         vertical.addWidget(boton)
         
-        
-        
+    
         widget1 = QWidget()
         widget1.setLayout(horizontal)
         
