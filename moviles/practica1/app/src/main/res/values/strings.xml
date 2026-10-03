@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">practica1</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="password">Contraseña</string>
+    <string name="bienvenidos_a_app_iesch">Bienvenidos a App Iesch</string>
+    <string name="login2">Iniciar sesión</string>
+    <string name="edad_canina">Edad Canina</string>
+    <string name="superheroes">Superhéroes</string>
+    <string name="quizzes">Cuestionarios</string>
+    <string name="settings">Configuración</string>
+    <string name="favorite">Favoritos</string>
+    <string name="log_out">Cerrar sesión</string>
+    <string name="discount">Descuento</string>
+    <string name="_20_june_30_july">20 de junio - 30 de julio</string>
+    <string name="until">Hasta</string>
+    <string name="_40">40%</string>
+    <string name="buenos_dias">Buenos dias</string>
+    <string name="app_name2">Dog Age</string>
+    <string name="por_ejemplo_18_o_75">For example 18 or 75</string>
+    <string name="que_edad_tienes">¿How old are you?</string>
+    <string name="calcular">Calculate</string>
+    <string name="texto_toast">Say something bruh</string>
+    <string name="textoRespuesta">If you were a dog, you would be %d years old</string>
+    <string name="nombre_alter_ego">Nombre Alter Ego</string>
+    <string name="power">Power</string>
+    <string name="nombre_alter_ego2">Nombre Alter Ego</string>
+    <string name="nombre_superheroe2">Nombre Superheroe</string>
+    <string name="bio">Bio</string>
+    <string name="nombre_alter_ego3">Nombre Alter Ego</string>
+    <string name="resumen_biografia">Resumen biografia</string>
+    <string name="guardar">Guardar</string>
 </resources>

@@ -1,20 +1,34 @@
 package org.iesch.practica1
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import org.iesch.practica1.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        val usuario = intent.getStringExtra("usuario")
+
+        binding.mainBuenosDiasText.text = ("Hola, " + (usuario)?.ifEmpty {"Usuario Sin nombre" })
+
+        binding.cardEdadCanina.setOnClickListener {
+            startActivity(Intent(this, dogAgekt::class.java))
+        }
+
+        binding.cardSuperHeroes.setOnClickListener {
+            startActivity(Intent(this, MainActivity_superheroes::class.java))
         }
     }
 }

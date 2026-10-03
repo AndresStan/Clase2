@@ -1,10 +1,7 @@
 package org.iesch.superheroes
 
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.widget.RatingBar
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -12,7 +9,7 @@ import androidx.core.view.WindowInsetsCompat
 import org.iesch.superheroes.databinding.ActivityDetailBinding
 import org.iesch.superheroes.model.SuperHeroe
 
-class DetailActivity : AppCompatActivity() {
+class DetailActivity_superheroes : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailBinding
 

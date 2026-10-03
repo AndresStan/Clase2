@@ -14,7 +14,7 @@
         android:theme="@style/Theme.SuperHeroes">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity_superheroes"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DetailActivity"
+            android:name=".DetailActivity_superheroes"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <provider
