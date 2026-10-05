@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👽 DELIRIO CÓSMICO ABSOLUTO: EDICIÓN PASCUAL 🍄</title>
+    <style>
+        body {
+            background-color: #050505;
+            color: white;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            perspective: 1200px;
+        }
+
+        .escenario {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            z-index: 10;
+        }
+
+        img {
+            border: 4px solid #fff;
+            border-radius: 15px;
+            transition: transform 0.05s linear; /* Ultra rápido */
+            max-width: 180px;
+        }
+
+        #iker { cursor: grab; }
+
+        #letrero {
+            position: fixed;
+            top: 10%;
+            font-size: 5rem;
+            text-transform: uppercase;
+            text-align: center;
+            opacity: 0;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .entidad-random {
+            position: fixed;
+            font-size: 6rem;
+            pointer-events: none;
+            z-index: 5;
+            filter: drop-shadow(0 0 25px currentColor);
+        }
+
+        /* El rastro del ratón ahora es PERMANENTE */
+        .rastro-permanente {
+            position: fixed;
+            pointer-events: none;
+            z-index: 2; /* Por debajo de las imágenes para no taparlas del todo */
+            transform: translate(-50%, -50%);
+        }
+
+        /* Marcador de combo superior derecho */
+        #marcador-combo {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 2.5rem;
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+            z-index: 1000;
+            display: none;
+        }
+
+        @keyframes arcoiris {
+            0% { filter: hue-rotate(0deg) saturate(3); }
+            100% { filter: hue-rotate(360deg) saturate(5); }
+        }
+
+        .viaje-astral {
+            animation: arcoiris 0.5s infinite linear !important;
+            position: fixed !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="letrero"></div>
+    <div id="marcador-combo">PUNTOS DE LOCURA: <span id="puntos">0</span></div>
+
+    <div class="escenario" id="escenario">
+        <img id="iker" src="ikerPacoSanz.jpg" alt="Iker" draggable="true">
+        <img id="clase" src="clase.jpg" alt="Clase">
+        <img id="estado" src="feliz.jpg" alt="Estado">
+    </div>
+
+<script>
+    const iker = document.getElementById('iker');
+    const clase = document.getElementById('clase');
+    const estado = document.getElementById('estado');
+    const letrero = document.getElementById('letrero');
+    const marcador = document.getElementById('marcador-combo');
+    const puntosSpan = document.getElementById('puntos');
+
+    const elementosLocos = ["👽", "🍄", "🛸", "🍆", "🌀", "👾", "✨", "👑", "🔥"];
+    const frasesPsicodelicas = [
+        "¡PASCUAL HA HACKEADO LA MATRIX!",
+        "¡LLUVIA DE POLLICAS ETERNAS!",
+        "¡NIVEL DE CRINGE AL MÁXIMO!",
+        "¡EL DIOS PASCUAL TE OBSERVA!"
+    ];
+
+    let caosActivado = false;
+    let puntosLocura = 0;
+
+    iker.ondragstart = (e) => e.dataTransfer.setData('text', 'iker');
+    clase.ondragover = (e) => e.preventDefault();
+
+    clase.ondrop = () => {
+        if (caosActivado) return;
+        estado.src = 'triste.jpg';
+        caosActivado = true;
+        
+        marcador.style.display = 'block';
+        letrero.innerText = frasesPsicodelicas[Math.floor(Math.random() * frasesPsicodelicas.length)];
+        letrero.style.opacity = "1";
+        letrero.classList.add('viaje-astral');
+
+        const imagenes = [iker, clase, estado];
+        imagenes.forEach(img => img.classList.add('viaje-astral'));
+
+        // 1. CAMBIO DE TAMAÑO COMPLETAMENTE LOCO Y AGRESIVO + MOVIMIENTO
+        setInterval(() => {
+            // Fondo psicodélico intermitente
+            document.body.style.background = `radial-gradient(circle, hsl(${Math.random() * 360}, 100%, 35%) 0%, #050505 80%)`;
+
+            imagenes.forEach(img => {
+                // Posiciones locas por toda la pantalla
+                img.style.left = Math.random() * (window.innerWidth - 200) + 'px';
+                img.style.top = Math.random() * (window.innerHeight - 200) + 'px';
+                
+                // ESCALA ULTRA LOCA Y COMPLETAMENTE RANDOM (De minúscula a gigante de golpe)
+                const escalaX = 0.2 + Math.random() * 3.5;
+                const escalaY = 0.2 + Math.random() * 3.5;
+                const rotacion = Math.random() * 360;
+                const distorsionZ = Math.random() * 400 - 200;
+
+                img.style.transform = `scale(${escalaX}, ${escalaY}) rotate(${rotacion}deg) translateZ(${distorsionZ}px)`;
+            });
+        }, 80); // Velocidad absurda
+
+        // 2. Spawn de lluvias de Emojis interdimensionales
+        setInterval(() => {
+            const entidad = document.createElement('div');
+            entidad.className = 'entidad-random';
+            entidad.innerText = elementosLocos[Math.floor(Math.random() * elementosLocos.length)];
+            
+            entidad.style.left = Math.random() * window.innerWidth + 'px';
+            entidad.style.top = Math.random() * window.innerHeight + 'px';
+            entidad.style.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            entidad.style.transform = `rotate(${Math.random()*360}deg) scale(${0.5 + Math.random()*2})`;
+            
+            document.body.appendChild(entidad);
+
+            // Capamos para que no explote el PC (60 max en pantalla)
+            if(document.querySelectorAll('.entidad-random').length > 60) {
+                document.querySelectorAll('.entidad-random')[0].remove();
+            }
+        }, 100);
+    };
+
+    // --- NUEVA FUNCIONALIDAD 1: RASTRO PERMANENTE + CONTADOR DE LOCURA ---
+    window.addEventListener('mousemove', (e) => {
+        if (!caosActivado) return;
+
+        puntosLocura++;
+        puntosSpan.innerText = puntosLocura;
+
+        const rastro = document.createElement('div');
+        rastro.className = "rastro-permanente";
+        
+        // Elige qué pintar permanentemente en el lienzo del desastre
+        const random = Math.random();
+        if (random < 0.4) {
+            rastro.innerText = "🍆"; // Pollica
+            rastro.style.fontSize = (15 + Math.random() * 40) + "px";
+            rastro.style.filter = `drop-shadow(0 0 10px hsl(${Math.random() * 360}, 100%, 50%))`;
+        } else if (random < 0.8) {
+            // Clon en miniatura de tu imagen
+            const imgClon = document.createElement('img');
+            imgClon.src = "ikerPacoSanz.jpg";
+            imgClon.style.width = (20 + Math.random() * 50) + "px";
+            imgClon.style.borderRadius = "50%";
+            rastro.appendChild(imgClon);
+        } else {
+            // TEXTO SORPRESA DE PASCUAL
+            rastro.innerText = "PASCUAL";
+            rastro.style.fontFamily = "monospace";
+            rastro.style.fontWeight = "bold";
+            rastro.style.color = `hsl(${Math.random() * 360}, 100%, 60%)`;
+            rastro.style.fontSize = "20px";
+        }
+
+        rastro.style.left = e.clientX + 'px';
+        rastro.style.top = e.clientY + 'px';
+        rastro.style.transform = `rotate(${Math.random() * 360}deg)`;
+
+        document.body.appendChild(rastro);
+    });
+
+    // --- NUEVA FUNCIONALIDAD 2: EVENTOS SORPRESA POR TECLADO ---
+    window.addEventListener('keydown', (e) => {
+        if (!caosActivado) return;
+
+        // Si pulsas la barra espaciadora, limpia los dibujos permanentes si te asfixias
+        if (e.code === "Space") {
+            document.querySelectorAll('.rastro-permanente').forEach(el => el.remove());
+            puntosLocura = 0;
+            puntosSpan.innerText = puntosLocura;
+        }
+        
+        // Si pulsas la 'P' invocas un Pascual gigante supremo en el centro
+        if (e.key.toLowerCase() === 'p') {
+            const pascualGigante = document.createElement('div');
+            pascualGigante.style.position = 'fixed';
+            pascualGigante.style.fontSize = '12rem';
+            pascualGigante.style.left = '50%';
+            pascualGigante.style.top = '50%';
+            pascualGigante.style.transform = 'translate(-50%, -50%) rotate(45deg)';
+            pascualGigante.style.color = '#ff00ff';
+            pascualGigante.style.zIndex = '9999';
+            pascualGigante.innerText = "👑 PASCUAL SUPREMO 👑";
+            pascualGigante.style.textShadow = "0 0 50px #fff";
+            document.body.appendChild(pascualGigante);
+            
+            setTimeout(() => pascualGigante.remove(), 1500);
+        }
+    });
+</script>
+</body>
+</html>

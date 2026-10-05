@@ -330,25 +330,57 @@ palabra y a minúsculas el resto.
    /*
    12.	Crea un script en el que se pida la fecha de nacimiento y
     devuelva la fecha en formato: dd-mm-aaaa, es decir, 26-11-2015.
-    */
+    
+
+      var texto = prompt("Dime tu fecha de nacimiento: EJ (21 del 9 del 2007)")
+      var regex = /(\d{1,2})[A-Za-z ]+(\d{1,2})[A-Za-z ]+([\d]{4})/
+
+      console.log(`${texto.match(regex)[1]}/${texto.match(regex)[2]}/${texto.match(regex)[3]}`);
+      
+*/
+
+      /*
+      13. Crea un script que cuando le pases un objeto de tipo Date genere una cadena
+con el formato: Día de la semana, dd de mm de aaaa, es decir, jueves, 26 de noviembre de 2015. 
+
+    
+
+     var diasSemana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+     var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+
+     var actual = new Date()
+     console.log(actual);
+     
+     console.log(`${diasSemana[actual.getDay()-1]}, ${actual.getDate()} de ${meses[actual.getMonth()]} de ${actual.getFullYear()}.`);
+   
+
+ */
 
 
+ /*
+ 14. Crea un script que diga si la fecha es de un año bisiesto. 
+
+      var año = prompt("Dime el año")
+     alert( (año % 4 === 0 && año % 100 !== 0) || (año % 400 === 0))
+
+*/
+
+/*
+   15. Crea un script que nos devuelva la edad actual de una persona a partir de su
+   fecha de nacimiento.
+*/
+      
+      var año = prompt("Dime tu fecha de nacimiento: EJ (21 del 9 del 2007)")
+      var regex = /(\d{1,2})[A-Za-z ]+(\d{1,2})[A-Za-z ]+([\d]{4})/
 
 
+      var fechaUsuario = new Date(año.match(regex)[3],año.match(regex)[2]-1, año.match(regex)[1] )
+      var fechaActual = new Date()
 
+      console.log(new Date(fechaActual - fechaUsuario).getFullYear());
+      
 
-
-
-
-
-
-
-
-
-
-
-
-
+   
 
 
 
