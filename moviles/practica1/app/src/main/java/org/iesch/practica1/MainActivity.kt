@@ -30,5 +30,9 @@ class MainActivity : AppCompatActivity() {
         binding.cardSuperHeroes.setOnClickListener {
             startActivity(Intent(this, MainActivity_superheroes::class.java))
         }
+
+        binding.cardQuizzes.setOnClickListener {
+            startActivity(Intent(this, quizz::class.java))
+        }
     }
 }

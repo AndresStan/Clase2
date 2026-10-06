@@ -29,4 +29,6 @@
     <string name="nombre_alter_ego3">Nombre Alter Ego</string>
     <string name="resumen_biografia">Resumen biografia</string>
     <string name="guardar">Guardar</string>
+    <string name="siguiente">Siguiente</string>
+
 </resources>
