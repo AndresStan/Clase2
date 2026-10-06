@@ -368,7 +368,7 @@ con el formato: Día de la semana, dd de mm de aaaa, es decir, jueves, 26 de nov
 /*
    15. Crea un script que nos devuelva la edad actual de una persona a partir de su
    fecha de nacimiento.
-*/
+
       
       var año = prompt("Dime tu fecha de nacimiento: EJ (21 del 9 del 2007)")
       var regex = /(\d{1,2})[A-Za-z ]+(\d{1,2})[A-Za-z ]+([\d]{4})/
@@ -377,13 +377,61 @@ con el formato: Día de la semana, dd de mm de aaaa, es decir, jueves, 26 de nov
       var fechaUsuario = new Date(año.match(regex)[3],año.match(regex)[2]-1, año.match(regex)[1] )
       var fechaActual = new Date()
 
-      console.log(new Date(fechaActual - fechaUsuario).getFullYear());
+      let edad = fechaActual.getFullYear() - fechaUsuario.getFullYear()
+
+
+      if (fechaActual.getMonth >= fechaUsuario.getMonth && fechaActual.getDay() >= fechaUsuario.getDay()) {
+         
+
+
+      } else {
+         edad--
+      }
+      console.log(edad);
       
 
-   
+*/
 
 
+/*
 
+16.	Crea un script que genere un horario similar a este: 
+
+*/
+
+let horario=[
+            ["IPPE", "PROY", "IPPE", "AD", "SGE"],
+            ["DI", "SGE", "AD", "AD", "SGE"],
+            ["DI", "SGE", "AD", "AD", "SASP"],
+            ["RECREO","RECREO","RECREO","RECREO","RECREO"],
+            ["DWC", "PMDM", "PMDM", "PROY", "DI"],
+            ["DWC", "PMDM", "PMDM", "PSP", "DI"],
+            ["DWC", "PMDM", "PMDM", "PSP", "DI"]
+];
+
+var primeraHora = new Date(2026, 1, 1, 15, 45)
+
+ 
+let horas = []
+for (let index = 1; index <= 6; index++) {
+
+  if (index == 3) {
+         horas[index] = (primeraHora.getHours()+":"+primeraHora.getMinutes()+"-")
+         primeraHora.setMinutes(primeraHora.getMinutes()+50)
+         horas[index] = horas[index]+primeraHora.getHours()+":"+primeraHora.getMinutes()
+         primeraHora.setMinutes(primeraHora.getMinutes()+15)
+  } else {
+         horas[index] = (primeraHora.getHours()+":"+primeraHora.getMinutes()+"-")
+         primeraHora.setMinutes(primeraHora.getMinutes()+50)
+         horas[index] = horas[index]+primeraHora.getHours()+":"+primeraHora.getMinutes()
+         primeraHora.setMinutes(primeraHora.getMinutes()+5)
+  }
+ 
+}
+
+console.log(horas);
+
+// seguir
 
 
 
