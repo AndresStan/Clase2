@@ -52,11 +52,11 @@ class MainActivity_superheroes : AppCompatActivity() {
         setContentView(binding.root)
 
 
-//        // 2 Linkeamos el elemento con abrir la cámara
-//        heroImage = binding.heroImage
-//        binding.heroImage.setOnClickListener {
-//            abrirCamara()
-//        }
+        // 2 Linkeamos el elemento con abrir la cámara
+        heroImage = binding.heroImage
+        binding.heroImage.setOnClickListener {
+            abrirCamara()
+        }
 
 
         // A partir de aqui introduzco el codigo necesario
@@ -82,16 +82,16 @@ class MainActivity_superheroes : AppCompatActivity() {
         }
 
     }
-//    fun abrirCamara() {
-//        // Aqui debemos craer un path temporal para guardar esa imagen que acabamos de captar
-//        val imageFile = crearImagenFile()
-//
-//        // Ahora ya tenemos el archivo de tipo file pero lo que necesitamos es el uri
-//        // Sera a traves del FileProvider
-//        // FileProvider lo que hace es compartir el file con otras aplicaciones de forma segura
-//        val uri = FileProvider.getUriForFile(this, "${applicationContext.packageName}.provider", imageFile)
-//            getContent.launch(uri)
-//    }
+    fun abrirCamara() {
+        // Aqui debemos craer un path temporal para guardar esa imagen que acabamos de captar
+        val imageFile = crearImagenFile()
+
+        // Ahora ya tenemos el archivo de tipo file pero lo que necesitamos es el uri
+        // Sera a traves del FileProvider
+        // FileProvider lo que hace es compartir el file con otras aplicaciones de forma segura
+        val uri = FileProvider.getUriForFile(this, "${applicationContext.packageName}.provider", imageFile)
+            getContent.launch(uri)
+    }
 
     private fun crearImagenFile() : File {
         // Esta funcion crea un objeto tipo file y de ese file recuperaremos la uri
@@ -116,13 +116,13 @@ class MainActivity_superheroes : AppCompatActivity() {
         // intent.putExtra("bio", bio)
         // intent.putExtra("power", power)
 
-//        intent.putExtra("superheroe", superHeroe)
-//        // De esta manera todos los campos se enviaran a DetailActivity
-//        // Añado la imagen
-//        intent.putExtra("path_heroe", picturePath)
-//
-//        // Iniciamos la nueva actividad
-//        startActivity(intent)
+        intent.putExtra("superheroe", superHeroe)
+        // De esta manera todos los campos se enviaran a DetailActivity
+        // Añado la imagen
+        intent.putExtra("path_heroe", picturePath)
+
+        // Iniciamos la nueva actividad
+        startActivity(intent)
     }
 
 

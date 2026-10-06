@@ -21,14 +21,14 @@ class DetailActivity_superheroes : AppCompatActivity() {
         setContentView(binding.root)
 
 
-//        // 1 - Recibimos el Objeto SuperHeroe del intent
-//        val superHeroe = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
-//            // Para versiones sdk 33 o superiores
-//            intent.getParcelableExtra("superheroe", SuperHeroe::class.java)
-//        } else {
-//            // Para versiones menores a 33
-//            intent.getParcelableExtra<SuperHeroe>("superheroe")
-//        }
+        // 1 - Recibimos el Objeto SuperHeroe del intent
+        val superHeroe = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+            // Para versiones sdk 33 o superiores
+            intent.getParcelableExtra("superheroe", SuperHeroe::class.java)
+        } else {
+            // Para versiones menores a 33
+            intent.getParcelableExtra<SuperHeroe>("superheroe")
+        }
 
         //Recibimos los datos del main acitivity
         val bundle = intent.extras!!
@@ -40,11 +40,11 @@ class DetailActivity_superheroes : AppCompatActivity() {
         // val bio = bundle.getString("bio") ?: "Bio no Encontrada"
         // val power = bundle.getFloat("power")
 
-//        // Rellenamos los campos con los valores recibidos
-//        binding.heroNameTv.text = superHeroe?.nombre ?: "No hay nombre"
-//        binding.alterEgoResult.text = superHeroe?.alterEgo ?: "No hay alterEgo"
-//        binding.bioResult.text = superHeroe?.bio ?: "No hay bio"
-//        binding.ratingBarInmovible.rating = superHeroe?.power ?: 0f
+        // Rellenamos los campos con los valores recibidos
+        binding.heroNameTv.text = superHeroe?.nombre ?: "No hay nombre"
+        binding.alterEgoResult.text = superHeroe?.alterEgo ?: "No hay alterEgo"
+        binding.bioResult.text = superHeroe?.bio ?: "No hay bio"
+        binding.ratingBarInmovible.rating = superHeroe?.power ?: 0f
 
         // Asigno la imagen a la imageView
         binding.imageView.setImageBitmap(bitmap)
