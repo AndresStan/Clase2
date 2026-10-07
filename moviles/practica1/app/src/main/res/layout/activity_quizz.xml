@@ -155,7 +155,7 @@
 
                     android:background="@drawable/background_opccion"
                     android:textSize="20sp"
-
+                    android:textColor="@color/black"
 
                     tools:text="y = 7" />
 
@@ -164,7 +164,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="80dp"
                     android:layout_margin="20dp"
-
+                    android:textColor="@color/black"
                     android:background="@drawable/background_opccion"
                     android:textSize="20sp"
                     tools:text="y = 17" />

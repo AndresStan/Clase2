@@ -60,6 +60,7 @@
                 android:layout_height="wrap_content"
                 tools:text="¡Correcto!"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:textSize="45sp"
                 app:layout_constraintBottom_toTopOf="@+id/buttonSiguienteAnswer"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -97,9 +98,33 @@
                 android:layout_marginTop="8dp"
                 android:layout_height="wrap_content"
                 tools:text="Has elegido la respuesta correcta."
+                android:textColor="#575757"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textoRespuestaAnswer" />
+
+            <TextView
+                android:id="@+id/textoAnswerFinalizado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="¡Cuestionario Finalizado!"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#39B449"
+                app:layout_constraintBottom_toTopOf="@+id/buttonSiguienteAnswer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoRespuestaAnswerExtra" />
+
+            <TextView
+                android:id="@+id/numAciertos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#575757"
+                tools:text="Has acertado: 2 preguntas"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textoAnswerFinalizado" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
