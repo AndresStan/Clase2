@@ -14,7 +14,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".LoginActivity"
             android:exported="true"
@@ -48,6 +48,10 @@
             android:exported="false" />
         <activity
             android:name=".quizz"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".quizzAnswer"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>

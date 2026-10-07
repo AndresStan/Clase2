@@ -137,33 +137,38 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <RadioButton
-                android:id="@+id/opcion1"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_marginTop="50dp"
-
-                android:background="@drawable/background_opccion"
-                android:textSize="20sp"
-
-
-                app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
-                app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
-                tools:text="y = 7" />
-
-            <RadioButton
-                android:id="@+id/opcion2"
-                android:layout_width="0dp"
-                android:layout_height="80dp"
+            <RadioGroup
+                android:id="@+id/radioGroup"
                 android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
-                android:background="@drawable/background_opccion"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
-                app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
-                app:layout_constraintTop_toBottomOf="@+id/opcion1"
-                tools:text="y = 17" />
+                <RadioButton
+                    android:id="@+id/opcion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="20dp"
+
+                    android:background="@drawable/background_opccion"
+                    android:textSize="20sp"
+
+
+                    tools:text="y = 7" />
+
+                <RadioButton
+                    android:id="@+id/opcion2"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_margin="20dp"
+
+                    android:background="@drawable/background_opccion"
+                    android:textSize="20sp"
+                    tools:text="y = 17" />
+            </RadioGroup>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
