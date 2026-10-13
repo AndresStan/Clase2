@@ -13,7 +13,7 @@
       table,
       th,
       td {
-         border: 5px double black;
+         border: 1px solid black;
          /* Grosor, estilo y color del borde /
          border-collapse: collapse; /* Une los bordes en una sola línea */
       }
@@ -399,6 +399,7 @@ con el formato: Día de la semana, dd de mm de aaaa, es decir, jueves, 26 de nov
 
 */
 
+// Este es el array bidimensional del que cojo los datos
 let horario=[
             ["IPPE", "PROY", "IPPE", "AD", "SGE"],
             ["DI", "SGE", "AD", "AD", "SGE"],
@@ -409,29 +410,69 @@ let horario=[
             ["DWC", "PMDM", "PMDM", "PSP", "DI"]
 ];
 
+// Este es el array de los dias de la semana, dejo un espacio al principio para que la primera casilla no me la pinte
+let diasSemana = [" ","Lunes", "Martes", "Miercoles", "Jueves", "Viernes"]
+
+// Para calcular las horas creo un objeto hora que empieze a la primera hora de clase
 var primeraHora = new Date(2026, 1, 1, 15, 45)
 
  
+// Logica para calcular las horas
+// Me creo el aray
 let horas = []
-for (let index = 1; index <= 6; index++) {
 
+// Son 7 horas en total asi que del 1 al 7
+for (let index = 1; index <= 7; index++) {
+
+   // Si es la hora del recreo solo sumo 15 minutos a diferencia de los 5 minutos entre clase y clase
+  if (index == 4) {
+   horas[index] = (primeraHora.getHours()+':'+primeraHora.getMinutes())
+   primeraHora.setMinutes(primeraHora.getMinutes()+15)
+   horas[index] = (horas[index]+'-'+primeraHora.getHours()+':'+primeraHora.getMinutes())
+   continue;
+  } 
+
+  // Si es la hora de antes del recreo no le sumo los 5 minutos ya que no hay
   if (index == 3) {
          horas[index] = (primeraHora.getHours()+":"+primeraHora.getMinutes()+"-")
          primeraHora.setMinutes(primeraHora.getMinutes()+50)
          horas[index] = horas[index]+primeraHora.getHours()+":"+primeraHora.getMinutes()
-         primeraHora.setMinutes(primeraHora.getMinutes()+15)
+         
   } else {
+   // Si si que es hora detras de hora normal entonces si que le sumo los 5 minutos que hay de descanso
          horas[index] = (primeraHora.getHours()+":"+primeraHora.getMinutes()+"-")
          primeraHora.setMinutes(primeraHora.getMinutes()+50)
          horas[index] = horas[index]+primeraHora.getHours()+":"+primeraHora.getMinutes()
          primeraHora.setMinutes(primeraHora.getMinutes()+5)
   }
- 
+
+  
 }
 
-console.log(horas);
+// Logica para pintar todo
+document.write("<table>")
 
-// seguir
+// 8 huecos de arriba a abanjo para rellenar
+for (let i = 0; i < 8; i++) {
+   // Si es la primera linea la uso para poner los dias de la semana (aqui hago uso de el espacio al principio
+   // que me he dejado en el array de diasSemana)
+   if (i == 0) {
+      for (let index0 = 0; index0 < diasSemana.length ; index0++) {
+         document.write(`<td> ${diasSemana[index0]} </td>`)
+      }
+   } else {
+
+      // Si no es la primera fila lo relleno fila a fila con las horas de el array 
+      document.write(`<td> ${horas[i]} </td>`)
+      for (let j = 0; j < 5; j++) {
+         document.write(`<td> ${horario[i-1][j]} </td>`)
+      }     
+   
+   }
+   document.write("<tr>")
+}
+document.write("</table>")
+
 
 
 

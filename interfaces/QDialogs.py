@@ -14,10 +14,12 @@ class MainWindow(QMainWindow): # Asi se crea una clase
         self.setCentralWidget(boton)
         
     def botonPulsado(self, s):
-        dlg=CustomDialog() # Si queremos que la ventana que salga no tenga nada que ver con nuestro programa
+        dlg=CustomDialog(self) # Si queremos que la ventana que salga no tenga nada que ver con nuestro programa
         #  dlg=QDialog(self) Si queremos que la ventana este atacheada a nuestro programa y que no se pueda tocar nada
-        dlg.setWindowTitle("Cuadro de dialogo")
-        dlg.exec()
+        if dlg.exec(): # Si es correcto significa que el usuario le ha dado a un boton con clase accepted.
+            print("SISISISISISISISIS")
+        else: # Si NO es correcto significa que el usuario le ha dado a un boton con clase rejected (tanto por botones o por darle a la X).
+            print("NONOONO")
         
         
 app = QApplication([])

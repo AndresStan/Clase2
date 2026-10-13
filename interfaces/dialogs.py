@@ -5,8 +5,8 @@ from PyQt6.QtGui import QAction, QIcon
 
 
 class CustomDialog(QDialog): # Asi se crea una clase
-    def __init__(self): # Asi se crea una funcion
-        super().__init__()
+    def __init__(self, parent=None): # Asi se crea una funcion
+        super().__init__(parent)
         
         self.setWindowTitle("Cuadro de dialogo")
         
