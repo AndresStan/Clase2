@@ -17,7 +17,7 @@ class MainWindow(QMainWindow): # Asi se crea una clase
     def __init__(self): # Asi se crea una funcion
         super().__init__()
         self.setWindowTitle("MiTitulo")
-       
+    
         boton =  QPushButton("Pulsa aqui")
         boton.clicked.connect(self.mostrarVentana)
         self.setCentralWidget(boton)
