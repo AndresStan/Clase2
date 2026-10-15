@@ -18,8 +18,6 @@ class Heroe {
     this.poder
   });
 
-
-
   @override
   String toString() {
     return 'Soy el metodo toString';
