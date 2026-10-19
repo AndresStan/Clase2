@@ -51,7 +51,7 @@ class Productor implements Runnable {
             Thread.sleep(500);
             colaTareas.producir(9);
             Thread.sleep(500);
-            colaTareas.producir(10);
+            colaTareas.producir(-1);
 
 
 
