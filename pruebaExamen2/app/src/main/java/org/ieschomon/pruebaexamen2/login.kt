@@ -41,10 +41,10 @@ class login : AppCompatActivity() {
                 binding.login.setText("Usuario o contraseña incorrectas")
             } else if (usuario.toString() == "Andres" && contraseña.toString() == "1234") {
                 var intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("usuario", usuario.toString())
+
                 startActivity(intent)
             }
-
-
 
 
 
