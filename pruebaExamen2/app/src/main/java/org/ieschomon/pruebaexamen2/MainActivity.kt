@@ -27,6 +27,26 @@ class MainActivity : AppCompatActivity() {
 
         val bundle = intent.extras!!
 
+        binding.SaludoPrograma.setText( "Bienvenido a mi app, " + bundle.getString("usuario"))
+        binding.textoPro.setText("Elije una caja random")
+
+        binding.imagencard0.setOnClickListener {
+            binding.textoPro.setText("Has tocado la primera caja estas loco")
+        }
+
+        binding.imagencard1.setOnClickListener {
+            binding.textoPro.setText("Has tocado la segunda caja estas loco")
+        }
+
+        binding.imagencard2.setOnClickListener {
+            binding.textoPro.setText("Has tocado la tercera caja estas loco")
+        }
+
+        binding.imagencard3.setOnClickListener {
+            binding.textoPro.setText("Has tocado la cuarta caja estas loco")
+        }
+
+
 
 
 
