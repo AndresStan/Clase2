@@ -38,8 +38,6 @@ public class DemoSpring1Application implements CommandLineRunner {
 		Persona p2 = Persona.builder().nombre("Pescador").apellidos("Mar").dni("11111111W").email("pescanova@salmon.com").build();
 		Persona p3 = Persona.builder().nombre("Pepito").apellidos("Grillo").dni("12121212S").email("pepito@grillo.com").build();
 
-
-
 		List<Persona> personaList = new ArrayList<>(Arrays.asList(p, p1, p2 , p3));
 		personaRepositorio.saveAll(personaList);
 

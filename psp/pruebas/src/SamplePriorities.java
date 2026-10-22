@@ -9,7 +9,7 @@ public class SamplePriorities extends Thread {
             System.out.println("\t(" + this.getName() + ": " + i + ")");
         }
     }
-    public static void main(String[] args) {
+    static void main(String[] args) {
 // crear hilos
         SamplePriorities h1 = new SamplePriorities("One");
         SamplePriorities h2 = new SamplePriorities("Two");

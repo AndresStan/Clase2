@@ -1,28 +1,35 @@
 import 'package:flutter/material.dart';
 
 class MiScreen extends StatelessWidget {
-   
-  const MiScreen({super.key});
-  
+  final games = [
+    "Sonic",
+    "Rocket night adventures",
+    "cool spot",
+    "Micromachines",
+    "Street fighter II",
+    "Street os Rage 2",
+  ];
+
+  MiScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Listview Tipo 1"),),
+      appBar: AppBar(title: Text("Listview Tipo 1")),
       body: ListView(
         children: [
-          ListTile(
-            leading: Icon(Icons.access_alarm),
-            onTap: () {
-              
-            },
-            title: Text("Hola a DAM 2"),
-            subtitle: Text("no se que"),
-            trailing: Icon(Icons.arrow_forward_ios_rounded),
+          ...games.map(
+            (juego) => ListTile(
+              leading: Icon(Icons.access_alarm),
+              onTap: () {},
+              title: Text(juego),
+              subtitle: Text("Juegazo"),
+              trailing: Icon(Icons.arrow_forward_ios_rounded),
+            ),
           ),
-          
-          
+          Divider()
         ],
-      )
+      ),
     );
   }
 }

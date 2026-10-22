@@ -6,7 +6,7 @@ public class HelloRunnable implements Runnable {
         contador++;
         System.out.println(contador);
     }
-    public static void main(String args[]) throws InterruptedException {
+    static void main(String[] args) throws InterruptedException {
         new Thread(new HelloRunnable()).start();
         new Thread(new HelloRunnable()).start();
         new Thread(new HelloRunnable()).start();
