@@ -30,7 +30,7 @@ class MainActivity2 : AppCompatActivity() {
         val bundle = intent.extras!!
         binding.algo.setText(bundle.getString("tellevas"))
 
-        binding.button.setText("Voler al menu principal")
+        binding.button.setText("Volver al menu principal")
         binding.button.setOnClickListener {
             intent = Intent(this, MainActivity::class.java)
             intent.putExtra("usuario", bundle.getString("usuario"))
