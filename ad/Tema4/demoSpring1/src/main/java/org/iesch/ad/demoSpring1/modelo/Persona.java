@@ -26,6 +26,9 @@ public class Persona {
     String dni;
     String email;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    Coche coche;
+
     LocalDateTime createdAt;
 
     @PrePersist // Si le pones esto se ejecuta antes del save

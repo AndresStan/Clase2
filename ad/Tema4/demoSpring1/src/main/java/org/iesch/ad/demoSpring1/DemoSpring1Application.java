@@ -1,7 +1,9 @@
 package org.iesch.ad.demoSpring1;
 
 import lombok.RequiredArgsConstructor;
+import org.iesch.ad.demoSpring1.modelo.Coche;
 import org.iesch.ad.demoSpring1.modelo.Persona;
+import org.iesch.ad.demoSpring1.repositorio.CocheRepositorio;
 import org.iesch.ad.demoSpring1.repositorio.PersonaRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -26,6 +28,9 @@ public class DemoSpring1Application implements CommandLineRunner {
 	@Autowired
 	PersonaRepositorio personaRepositorio;
 
+	@Autowired
+	CocheRepositorio cocheRepositorio;
+
 	public static void main(String[] args) {
 		SpringApplication.run(DemoSpring1Application.class, args);
 	}
@@ -33,7 +38,23 @@ public class DemoSpring1Application implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println("Hola mundo");
+
+		Optional<Persona> per = personaRepositorio.findById(10L);
+		if (per.isPresent()){
+			System.out.println(per);
+		} else {
+			System.out.println("No se ha encontrado ");
+		}
+
+
+		Optional<Coche> coch = cocheRepositorio.findById(1L);
+		if (coch.isPresent()){
+			System.out.println(coch);
+		} else {
+			System.out.println("No se ha encontrado ");
+		}
 /*
+
 		Persona p = Persona.builder().nombre("Andres").apellidos("Stan").dni("61091513V").email("aastan@iesch.org").build();
 		Persona p1 = Persona.builder().nombre("Luis").apellidos("Gabriel").dni("66666666F").email("antonica@gmail.com").build();
 		Persona p2 = Persona.builder().nombre("Pescador").apellidos("Mar").dni("11111111W").build();
@@ -100,7 +121,7 @@ public class DemoSpring1Application implements CommandLineRunner {
 		personatmp.setId(3L);
 		personaRepositorio.delete(personatmp);
 
-*/
+*/		/*
 
 		List<Persona> listaPersonas = personaRepositorio.buscaTodasPersonas();
 		System.out.println(listaPersonas);
@@ -117,6 +138,18 @@ public class DemoSpring1Application implements CommandLineRunner {
 		// Buscamos las personas cuyas letras del dni sea a y el apellido contenga una R
 		List<Persona> personaListContieneDniyContieneApellido = personaRepositorio.findByDniContainingAndApellidosContaining('V', 't');
 		System.out.println(personaListContieneDniyContieneApellido);
+		*/
+		/*
+		System.out.println("OneToOne");
+		Coche c = Coche.builder().marca("Tesla").modelo("Plaid").matricula("1118 DNA").build();
+		Persona p = Persona.builder().id(10L).nombre("Emmanuel").apellidos("Ciro").dni("61091513V").email("asolana@gmail.com").coche(c).build();
+
+
+		personaRepositorio.save(p);
+		*/
+
+		// Cargar de BBDD la persona con id 11
+
 	}
 
 }
