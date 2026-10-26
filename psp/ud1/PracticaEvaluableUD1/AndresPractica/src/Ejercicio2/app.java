@@ -16,6 +16,7 @@ public class app {
         consumidor2.start();
 
         // no me da tiempo a seguir
+        
 
     }
 }
