@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>870</width>
-    <height>637</height>
+    <width>669</width>
+    <height>786</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>Nombre:</string>
+         <string>Nombre</string>
         </property>
        </widget>
       </item>
@@ -44,67 +44,126 @@
      </layout>
     </item>
     <item>
-     <widget class="QGroupBox" name="">
-      <property name="title">
-       <string>Opciones</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QRadioButton" name="radioButton">
-         <property name="text">
-          <string>RadioButton</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_2">
-         <property name="text">
-          <string>RadioButton</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="radioButton_3">
-         <property name="text">
-          <string>RadioButton</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item>
-     <widget class="QTextEdit" name="textEdit"/>
-    </item>
-    <item>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Bloc de notas</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="textEdit"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QTextEdit" name="textEdit_2"/>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>Borrar</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="text">
+           <string>Ocultar</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_3">
+          <property name="text">
+           <string>Mostrar</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_4">
+          <property name="text">
+           <string>Listado</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QRadioButton" name="radioButton">
+        <property name="text">
+         <string>No me gusta esta distribucion</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QCheckBox" name="checkBox">
+        <property name="text">
+         <string>Seleccioname</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QComboBox" name="comboBox"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QRadioButton" name="radioButton_2">
+        <property name="text">
+         <string>Me es indiferente</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QRadioButton" name="radioButton_3">
+        <property name="text">
+         <string>Me encanta cómo esta distrbuibo todo</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="2">
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="text">
+         <string>Soy un boton que ocupa 2 celdas</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
       <item>
        <spacer name="horizontalSpacer">
         <property name="orientation">
          <enum>Qt::Orientation::Horizontal</enum>
         </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Policy::Fixed</enum>
-        </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>638</width>
-          <height>48</height>
+          <width>198</width>
+          <height>20</height>
          </size>
         </property>
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="pushButton_7">
         <property name="text">
-         <string>PushButton</string>
+         <string>OK</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="pushButton_6">
         <property name="text">
-         <string>PushButton</string>
+         <string>Cancel</string>
         </property>
        </widget>
       </item>
@@ -117,7 +176,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>870</width>
+     <width>669</width>
      <height>33</height>
     </rect>
    </property>
