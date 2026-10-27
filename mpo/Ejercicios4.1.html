@@ -13,10 +13,32 @@
 </head>
 
 <body>
+    <!-- Ejercicio RAID-->
 
-    <!--Ejercicio 8-->
+    <h1>Calculo RAID</h1>
+    <p>Nivel RAID:
+        <select name="raid" id="tiporaid">RAID
+            <option value="0">RAID 0</option>
+            <option value="1">RAID 1</option>
+            <option value="2">RAID 5</option>
+        </select>
+        Numero de discos:
+        <select name="numdiscos" id="numdisc">DISCOS
+
+        </select>
+        Tamaño de los discos:
+        <select name="tbs" id="teras">TERABYTES
+            
+        </select>
+         TB
+         <button onclick="calcular()">Calcular</button>
+        
+    
+    </p>
+
+    <!--Ejercicio 8
     <button ondblclick="mio()">Ejercicio 8</button>
-
+    -->
     <!--Ejercicio 7
 
 
@@ -71,7 +93,7 @@
     </style>
 </body>
 
-<script src="ej8.js"></script>
+<script src="ejPascualRaid.js"></script>
 
 
 <script>

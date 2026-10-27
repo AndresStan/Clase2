@@ -1,0 +1,43 @@
+import 'package:componentes/theme/app_theme.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+class AlertScreen extends StatelessWidget {
+  const AlertScreen({super.key});
+
+  void mostrarAlerta(BuildContext context) {
+    showCupertinoDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text("Titulo de la alerta"),
+          content: Column(
+            mainAxisSize: .min,
+            children: [
+              Text("Data data data"),
+              SizedBox(height: 20),
+              FlutterLogo(size: 100,)
+            ],
+          )
+        );
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Alertas')),
+      body: Center(
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(backgroundColor: AppTheme.primary),
+          onPressed: () {mostrarAlerta(context);},
+          child: Padding(
+            padding: EdgeInsets.all(25),
+            child: Text("Mostrar Alerta"),
+          ),
+        ),
+      ),
+    );
+  }
+}
