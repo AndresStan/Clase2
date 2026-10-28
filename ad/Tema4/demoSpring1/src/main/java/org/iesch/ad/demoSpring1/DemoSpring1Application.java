@@ -37,8 +37,18 @@ public class DemoSpring1Application implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("Hola mundo");
 
+		System.out.println("Peta bidireccional");
+		Optional<Persona> persona = personaRepositorio.findById(10L);
+		Optional<Coche> coche = cocheRepositorio.findById(1L);
+		if (persona.isPresent()){
+			System.out.println(persona);
+			System.out.println(coche);
+		} else {
+			System.out.println("No se ha encontrado ");
+		}
+
+		/*
 		Optional<Persona> per = personaRepositorio.findById(10L);
 		if (per.isPresent()){
 			System.out.println(per);
@@ -55,6 +65,8 @@ public class DemoSpring1Application implements CommandLineRunner {
 		}
 /*
 
+		 */
+/*
 		Persona p = Persona.builder().nombre("Andres").apellidos("Stan").dni("61091513V").email("aastan@iesch.org").build();
 		Persona p1 = Persona.builder().nombre("Luis").apellidos("Gabriel").dni("66666666F").email("antonica@gmail.com").build();
 		Persona p2 = Persona.builder().nombre("Pescador").apellidos("Mar").dni("11111111W").build();

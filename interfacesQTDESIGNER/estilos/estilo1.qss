@@ -1,0 +1,28 @@
+QLabel {
+    color: aqua;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+
+/* #NOMBRE para aplicar a un solo nombre */
+QPushButton#pushButton_2 {
+    border: 5px solid orange;
+    border-style: dotted;
+    max-width: 30px;
+    max-height: 10px;
+
+    min-width: 20px;
+    min-height: 10px;
+
+}
+
+
+
+/* Si pones el punto es solo el padre, si no es todo el padre y sus subhijos */
+.QWidget { 
+    background-color: green;
+}
+

@@ -1,4 +1,4 @@
-from Ejercicio2MIO import Ui_MainWindow
+from Ejercicio3MIO import Ui_MainWindow
 from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel, QLineEdit, QVBoxLayout, QWidget, QCheckBox, QDoubleSpinBox, QSpinBox, QSlider, QDial, QCalendarWidget
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -8,6 +8,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.show()
         
 app = QApplication([])
-app.setStyle("Windows")
+app.setStyle("Fusion")
 ventana = MainWindow()
 app.exec()

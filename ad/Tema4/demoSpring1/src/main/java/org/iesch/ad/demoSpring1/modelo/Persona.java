@@ -1,6 +1,7 @@
 package org.iesch.ad.demoSpring1.modelo;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,7 +11,7 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
+//@ToString
 @Builder
 @EqualsAndHashCode
 @Entity
@@ -27,6 +28,7 @@ public class Persona {
     String email;
 
     @OneToOne(cascade = CascadeType.ALL)
+        @JoinColumn(name = "coche_id", referencedColumnName = "id")
     Coche coche;
 
     LocalDateTime createdAt;
@@ -44,8 +46,16 @@ public class Persona {
 
     }
 
-
-
-
-
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", dni='" + dni + '\'' +
+                ", email='" + email + '\'' +
+                ", coche=" + coche.id +
+                ", createdAt=" + createdAt +
+                '}';
+    }
 }
