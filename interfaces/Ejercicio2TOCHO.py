@@ -87,7 +87,7 @@ class MainWindow(QMainWindow): # Asi se crea una clase
         
     def grabar(self):
         if (self.input1.text() != "" and self.input2.text() != ""):
-               dlg=QMessageBox(self) # Si queremos que la ventana que salga no tenga nada que ver con nuestro programa
+               dlg=QMessageBox() # Si queremos que la ventana que salga no tenga nada que ver con nuestro programa
                dlg.setWindowTitle("Confirmacion")
                dlg.setText(f'Si eres {self.input1.text()} {self.input2.text()} pulsa SI')
                dlg.setStandardButtons(QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
