@@ -12,7 +12,7 @@ class MainWindow(QMainWindow): # Asi se crea una clase
         
         plantilla = QVBoxLayout() # Contenedor total
         plantilla1 = QHBoxLayout()
-        self.colores = QStackedLayout();
+        colores = QStackedLayout();
         
         boton = QPushButton("Red")
         boton1 = QPushButton("Green")
@@ -22,16 +22,16 @@ class MainWindow(QMainWindow): # Asi se crea una clase
         plantilla1.addWidget(boton1)
         plantilla1.addWidget(boton2)
         
-        self.colores.addWidget(Color("red"))
-        self.colores.addWidget(Color("green"))
-        self.colores.addWidget(Color("yellow"))
+        colores.addWidget(Color("red"))
+        colores.addWidget(Color("green"))
+        colores.addWidget(Color("yellow"))
         
-        boton.clicked.connect(lambda: self.colores.setCurrentIndex(0))
-        boton1.clicked.connect(lambda: self.colores.setCurrentIndex(1))
-        boton2.clicked.connect(lambda: self.colores.setCurrentIndex(2))
+        boton.clicked.connect(lambda: colores.setCurrentIndex(0))
+        boton1.clicked.connect(lambda: colores.setCurrentIndex(1))
+        boton2.clicked.connect(lambda: colores.setCurrentIndex(2))
         
         plantilla.addLayout(plantilla1)
-        plantilla.addLayout(self.colores)
+        plantilla.addLayout(colores)
         
         widget = QWidget()
         widget.setLayout(plantilla)

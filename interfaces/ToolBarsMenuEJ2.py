@@ -15,7 +15,8 @@ class MainWindow(QMainWindow): # Asi se crea una clase
 
         self.etiqueta = QLabel("Hola!")
         self.etiqueta.setAlignment(Qt.AlignmentFlag.AlignVCenter)
-        
+
+        #Esto para añadir la barra
         barra = QToolBar() 
         barra.setIconSize(QSize(16,16)) # Para indicarle que todos los iconos tendran este tamaño
         self.addToolBar(barra)
@@ -47,7 +48,9 @@ class MainWindow(QMainWindow): # Asi se crea una clase
         barra.addAction(boton2)
         barra.addSeparator()
         barra.addAction(boton3)
-        
+
+
+        # Para crear menu bar
         menu = self.menuBar()
         menu_archivo = menu.addMenu("&Archivo")
       

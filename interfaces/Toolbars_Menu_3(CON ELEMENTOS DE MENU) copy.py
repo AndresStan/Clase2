@@ -11,6 +11,7 @@ class MainWindow(QMainWindow): # Asi se crea una clase
       
       
         etiqueta = QLabel("Etiqueta")
+        etiqueta.setStatusTip("Etiqueta jeje")
         etiqueta.setAlignment(Qt.AlignmentFlag.AlignCenter) # Simplemente para alinearlo al centro
    
         barra = QToolBar()

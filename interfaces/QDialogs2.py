@@ -17,7 +17,7 @@ class MainWindow(QMainWindow): # Asi se crea una clase
         dlg=QMessageBox(self) # Si queremos que la ventana que salga no tenga nada que ver con nuestro programa
         dlg.setWindowTitle("Cuadro de mensaje")
         dlg.setText("Este es el mensaje de mi cuadro de mensaje")
-        dlg.setStandardButtons(QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.Cancel)
+        dlg.setStandardButtons(QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.Abort)
         dlg.setIcon(QMessageBox.Icon.Information)
         if dlg.exec() == QMessageBox.StandardButton.Yes: # Si es QMessage box obligatoriamente hay que poner == no va sin nada.
             print("SISISISISISISISIS")
