@@ -56,12 +56,12 @@ public class EstadisticasClima {
 
         System.out.println("TEMPERATURAS MINIMAS POR MES");
         for (int i = 0; i < 12; i++) {
-            System.out.println(nombresMeses[i] + ": " + minimosPorMes[i].getTmax() + "ºC " + " Fecha: " + minimosPorMes[i].getFecha() + " Hora: " +minimosPorMes[i].getHoratmax() + " Estacion: " +minimosPorMes[i].getIndicativo() + "(" + minimosPorMes[i].getNombre() + ")");
+            System.out.println(nombresMeses[i] + ": " + minimosPorMes[i].getTmin() + "ºC " + " Fecha: " + minimosPorMes[i].getFecha() + " Hora: " +minimosPorMes[i].getHoratmin() + " Estacion: " +minimosPorMes[i].getIndicativo() + "(" + minimosPorMes[i].getNombre() + ")");
         }
 
         System.out.println("Maxima total: " + maxAbsoluta.getTmax() + " ºC el " + maxAbsoluta.getFecha()+ " a las " + maxAbsoluta.getHoratmax() + " en la estacion " + maxAbsoluta.getIndicativo() + "(" + maxAbsoluta.getNombre() + ")");
 
-        System.out.println("Minima total: " + minAbsoluta.getTmax() + " ºC el " + minAbsoluta.getFecha()+ " a las " + minAbsoluta.getHoratmax() + " en la estacion " + minAbsoluta.getIndicativo() + "(" + minAbsoluta.getNombre() + ")");
+        System.out.println("Minima total: " + minAbsoluta.getTmin() + " ºC el " + minAbsoluta.getFecha()+ " a las " + minAbsoluta.getHoratmin() + " en la estacion " + minAbsoluta.getIndicativo() + "(" + minAbsoluta.getNombre() + ")");
 
 
     }

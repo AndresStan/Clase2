@@ -40,7 +40,7 @@ public class Lector extends RecursiveAction {
             // Si la tarea ya es lo suficientemente pequeña crea el registro tras deserealizarlo
                 try {
                     for (int i = start; i < end ; i++) {
-
+                        System.out.println("archivo: " + paths.get(i) + "registrado y calculado" + Main.contador.getAndIncrement());
                         Gson gson = new Gson();
                         String contenido = Files.readString(paths.get(i));
                         // El cabeza de melon de el creador de estos datos de la AEMET no se le ocurrio mejor forma que

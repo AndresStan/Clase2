@@ -27,71 +27,70 @@ public class Registro {
         this.horatmin = horatmin;
         this.tmax = tmax;
         this.horatmax = horatmax;
-
     }
 
-    public String getNombre() {
+    public synchronized String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
+    public synchronized void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public String getFecha() {
+    public synchronized String getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public synchronized void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
-    public String getIndicativo() {
+    public  synchronized String getIndicativo() {
         return indicativo;
     }
 
-    public void setIndicativo(String indicativo) {
+    public synchronized void setIndicativo(String indicativo) {
         this.indicativo = indicativo;
     }
 
-    public float getTmed() {
+    public synchronized float getTmed() {
         return tmed;
     }
 
-    public void setTmed(float tmed) {
+    public synchronized void setTmed(float tmed) {
         this.tmed = tmed;
     }
 
 
-    public float getTmin() {
+    public synchronized float getTmin() {
         return tmin;
     }
 
-    public void setTmin(float tmin) {
+    public synchronized void setTmin(float tmin) {
         this.tmin = tmin;
     }
 
-    public String getHoratmin() {
+    public synchronized String getHoratmin() {
         return horatmin;
     }
 
-    public void setHoratmin(String horatmin) {
+    public synchronized void setHoratmin(String horatmin) {
         this.horatmin = horatmin;
     }
 
-    public float getTmax() {
+    public synchronized float getTmax() {
         return tmax;
     }
 
-    public void setTmax(float tmax) {
+    public synchronized void setTmax(float tmax) {
         this.tmax = tmax;
     }
 
-    public String getHoratmax() {
+    public synchronized String getHoratmax() {
         return horatmax;
     }
 
-    public void setHoratmax(String horatmax) {
+    public synchronized void setHoratmax(String horatmax) {
         this.horatmax = horatmax;
     }
 

@@ -8,9 +8,15 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
+
+    public static AtomicInteger contador = new AtomicInteger(1);
+
     static void main() {
+
+
 
         // Segun mi cabeza lo que tiene mas sentido es hacer lo siguiente:
         // Creo una lista de hilos lectores
@@ -43,13 +49,16 @@ public class Main {
         // Creo la clase estadistias para llevar el conteo y la logica de TODAS las estadisticas
         EstadisticasClima estadisticasClima = new EstadisticasClima(); // Este obj estadisticas sera el que recorra todos los registros
 
-
-
         // CON FORK JOIN RECURSIVO evita la saturacion
         try (ForkJoinPool forkJoinPool = new ForkJoinPool()) {
             Lector tareaPrincipal = new Lector(0, listaRutas.size(), listaRutas, estadisticasClima);
             forkJoinPool.invoke(tareaPrincipal);
+            forkJoinPool.shutdown();
+            System.out.println(forkJoinPool.awaitTermination(100, TimeUnit.SECONDS));
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
+
 
         // Finalmente calculo cuanto tiempo a tardado el programa restando
         long fin = System.currentTimeMillis();
