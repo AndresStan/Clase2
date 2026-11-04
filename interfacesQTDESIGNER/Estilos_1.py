@@ -1,4 +1,4 @@
-from Ejercicio3MIO import Ui_MainWindow
+from uiMIO.Ejercicio3MIO import Ui_MainWindow
 from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel, QLineEdit, QVBoxLayout, QWidget, QCheckBox, QDoubleSpinBox, QSpinBox, QSlider, QDial, QCalendarWidget
 
 class MainWindow(QMainWindow, Ui_MainWindow):

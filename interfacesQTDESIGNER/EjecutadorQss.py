@@ -1,4 +1,4 @@
-from EjercicioMandado1MIO import Ui_MainWindow
+from uiMIO.EjercicioDosBotones import Ui_MainWindow
 from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QLabel, QLineEdit, QVBoxLayout, QWidget, QCheckBox, QDoubleSpinBox, QSpinBox, QSlider, QDial, QCalendarWidget
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -9,7 +9,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
 app = QApplication([])
 app.setStyle("Fusion")
-with open("estilos/EjercicioMandado1.qss", "r") as f:
+with open("estilos/EjercicioDosBotones.qss", "r") as f:
     app.setStyleSheet(f.read())
 ventana = MainWindow()
 app.exec()
