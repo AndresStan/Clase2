@@ -1,7 +1,7 @@
 package org.iesch.ad.demoSpring1.modelo;
 
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.*;
 import lombok.*;
 

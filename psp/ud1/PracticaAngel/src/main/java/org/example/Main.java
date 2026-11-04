@@ -16,8 +16,6 @@ public class Main {
 
     static void main() {
 
-
-
         // Segun mi cabeza lo que tiene mas sentido es hacer lo siguiente:
         // Creo una lista de hilos lectores
         // Cada hilo de ese "pool" de hilos leera la el archivo que le toca, y creara un nuevo registro de el en su clase Registro
