@@ -11,14 +11,14 @@ QPushButton{
 }
 
 QPushButton#pushButton{
-    border: 2px solid rgb(231, 19, 19);
+    border: 3px solid rgb(231, 19, 19);
     background-color: white;
     color: red;
     
 }
 
 QPushButton#pushButton_2{
-    border: 2px solid rgb(30, 184, 16);
+    border: 3px solid rgb(30, 184, 16);
     background-color: white;
     color: green;
 }

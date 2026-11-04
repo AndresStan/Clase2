@@ -1,0 +1,42 @@
+QWidget{
+    background-color: rgb(67, 67, 67);
+}
+
+QLabel{
+    background-color: grey;
+    font-style: italic;
+    color: white;
+    font-weight: bold;
+    font-size:medium
+}
+
+QComboBox{
+    background-color: rgb(156, 152, 152);
+
+}
+
+QPushButton{
+    background-color: rgb(156, 152, 152);
+    border-radius: 2px;
+    color: black;
+    padding: 5px;
+}
+
+QPushButton[text="ON"]{
+    border: 1px solid black;
+    background-color: green;
+    border-radius: 2px;
+    padding: 5px;
+    
+}
+
+QPushButton[text="OFF"]{
+    border: 1px solid black;
+    background-color: rgb(255, 0, 0);
+    border-radius: 2px;
+    padding: 5px;
+}
+
+
+
+
