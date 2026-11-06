@@ -1,0 +1,42 @@
+QWidget{
+    background-color: #BAB5B2;
+}
+QPushButton{
+    background-color: #FFFFFF;
+    color: black;
+    padding: 20px;
+    border: 4px solid black;
+    border-radius: 15px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+QLabel{
+    background-color: #FFFFFF;
+    padding: 15px;
+    font-weight: 900;
+}
+
+QPushButton#botonMas{
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    border: 4px solid black;
+    border-radius: 15px;
+}
+
+QPushButton#botonIgual{
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    border: 4px solid black;
+    border-radius: 15px;
+}
+
+QPushButton#botonCE{
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    border: 4px solid black;
+    border-radius: 15px;
+}
