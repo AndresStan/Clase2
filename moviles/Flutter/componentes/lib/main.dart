@@ -1,3 +1,4 @@
+import 'package:componentes/presentation/screens/miWidget.dart';
 import 'package:componentes/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'presentation/screens.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
         "listview2" :(context) => Listview2Screen(),
         "alert"     :(context) => AlertScreen(),
         "card"      :(context) => CardScreen(),
-        "buttons"      :(context) => BotonesScreen()
+        "buttons"      :(context) => BotonesScreen(),
+        "miWidget"      :(context) => MiWidget()
       },
       onGenerateRoute: (settings) => MaterialPageRoute(builder: (context) => CardScreen()),
       theme: AppTheme(colorSeleccionado: 1).getTheme()

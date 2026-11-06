@@ -20,6 +20,7 @@ class MenuScreen extends StatelessWidget {
       MenuOption(ruta: "listview2", icono: Icons.ac_unit, nombre: "ListView Tipo 2"),
       MenuOption(ruta: "alert", icono: Icons.zoom_out_sharp, nombre: "Ventanas"),
       MenuOption(ruta: "card", icono: Icons.credit_card, nombre: "Cards"),
+      MenuOption(ruta: "miWidget", icono: Icons.face, nombre: "Mi Widget"),
     ];
 
 
