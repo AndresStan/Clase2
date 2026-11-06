@@ -123,4 +123,3 @@ class Ui_MainWindow(object):
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Comentarios:", None))
     # retranslateUi
 
-       
