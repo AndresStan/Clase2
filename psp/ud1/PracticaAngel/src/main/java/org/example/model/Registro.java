@@ -1,8 +1,5 @@
 package org.example.model;
 
-import java.time.LocalDate;
-
-
 public class Registro {
 
     private String fecha;
@@ -29,68 +26,68 @@ public class Registro {
         this.horatmax = horatmax;
     }
 
-    public synchronized String getNombre() {
+    public  String getNombre() {
         return nombre;
     }
 
-    public synchronized void setNombre(String nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public synchronized String getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public synchronized void setFecha(String fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
-    public  synchronized String getIndicativo() {
+    public  String getIndicativo() {
         return indicativo;
     }
 
-    public synchronized void setIndicativo(String indicativo) {
+    public void setIndicativo(String indicativo) {
         this.indicativo = indicativo;
     }
 
-    public synchronized float getTmed() {
+    public  float getTmed() {
         return tmed;
     }
 
-    public synchronized void setTmed(float tmed) {
+    public  void setTmed(float tmed) {
         this.tmed = tmed;
     }
 
 
-    public synchronized float getTmin() {
+    public float getTmin() {
         return tmin;
     }
 
-    public synchronized void setTmin(float tmin) {
+    public  void setTmin(float tmin) {
         this.tmin = tmin;
     }
 
-    public synchronized String getHoratmin() {
+    public  String getHoratmin() {
         return horatmin;
     }
 
-    public synchronized void setHoratmin(String horatmin) {
+    public  void setHoratmin(String horatmin) {
         this.horatmin = horatmin;
     }
 
-    public synchronized float getTmax() {
+    public  float getTmax() {
         return tmax;
     }
 
-    public synchronized void setTmax(float tmax) {
+    public  void setTmax(float tmax) {
         this.tmax = tmax;
     }
 
-    public synchronized String getHoratmax() {
+    public  String getHoratmax() {
         return horatmax;
     }
 
-    public synchronized void setHoratmax(String horatmax) {
+    public  void setHoratmax(String horatmax) {
         this.horatmax = horatmax;
     }
 

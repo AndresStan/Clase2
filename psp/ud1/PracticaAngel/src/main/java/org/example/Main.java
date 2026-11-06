@@ -12,8 +12,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
 
-    public static AtomicInteger contador = new AtomicInteger(1);
-
     static void main() {
 
 
