@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de this y event</title>
+    <style>
+        #caja {
+            width: 200px;
+            height: 100px;
+            border: 2px solid gray;
+            background-color: #f0f0f0;
+            text-align: center;
+            line-height: 100px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Ejemplo de uso de 'this' -->
+    <div id="caja">Pasa el ratón o haz clic</div>
+
+    <script>
+        // Seleccionamos la caja
+        var miCaja = document.getElementById("caja");
+
+        // Usamos addEventListener pasando la función manejadora
+        miCaja.addEventListener("mouseover", cambiarNegro);
+        miCaja.addEventListener("mouseout", cambiarGris);
+        miCaja.addEventListener("click", gestionarEvento);
+  
+
+        // Función que usa 'this'
+        function cambiarNegro(evento) {
+            // 'this' apunta a 'miCaja' porque es el elemento que disparó el mouseover
+            this.style.borderColor = 'black'
+            this.style.backgroundColor = '#d0d0d0';
+        }
+
+        function cambiarGris(evento) {
+            // 'this' vuelve a apuntar a 'miCaja'
+            this.style.borderColor = 'gray';
+            this.style.backgroundColor = '#f0f0f0';
+        }
+
+        // Función que recibe y usa el objeto 'evento'
+        function gestionarEvento(evento) {
+            // evento.type nos dice qué evento exacto ocurrió (ej: "click")[cite: 15]
+            console.log("Tipo de evento: " + evento.type)
+            
+            // clientX y clientY dan las coordenadas del ratón respecto al navegador[cite: 15]
+            alert("Has hecho clic en las coordenadas X: " + evento.clientX + ", Y: " + evento.clientY)
+        }
+
+        // Ejemplo para capturar eventos de teclado a nivel global (document)
+        document.addEventListener("keyup", function(evento) {
+            // evento.keyCode nos da el código de la tecla que se acaba de soltar[cite: 15]
+            console.log("Has soltado la tecla con código: " + evento.keyCode)
+        });
+    </script>
+
+</body>
+</html>

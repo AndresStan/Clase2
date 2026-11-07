@@ -1,7 +1,7 @@
 var colores = ["green", "blue", "yellow", "pink", "red", "purple"]
 
 function numeroAleatorio(min, max) { // Rnadom
-  return Math.round(Math.random() * (max - min) + min);
+  return Math.round(Math.() * (max - min) + min);
 }
 
 

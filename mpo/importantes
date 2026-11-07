@@ -1,0 +1,2 @@
+slice() sirve para cortar y extraer 
+una parte de un texto o array, devolviendo ese fragmento en uno nuevo sin modificar el original.

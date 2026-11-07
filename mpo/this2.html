@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de this y event</title>
+    <style>
+        .caja {
+            width: 200px;
+            height: 100px;
+            border: 2px solid gray;
+            background-color: white;
+            text-align: center;
+            line-height: 100px;
+            margin-bottom: 20px;
+            display: inline-block;
+            margin: 1cm;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <script>
+        var cantidadCajas = 100;
+
+        for (let i = 1; i <= cantidadCajas; i++) {
+            var caja = document.createElement("div")
+            caja.className = "caja"
+            caja.innerText = "caja " + i
+            document.body.appendChild(caja)
+            caja.addEventListener("click", click)
+            caja.addEventListener("mouseover", hover)
+            caja.addEventListener("mouseout", unhover)
+
+        }
+
+                
+        function hover(params) {
+            if (!this.classList.contains("clicada")) {
+                this.style.borderColor = 'black';
+                this.style.backgroundColor = 'grey';
+            }
+        }
+
+        function unhover(params) {
+            if (!this.classList.contains("clicada")) {
+                this.style.borderColor = 'gray';
+                this.style.backgroundColor = 'white';
+            }
+        }
+
+        function click(evento) {
+            console.log("Has clickeado la " + this.innerText);
+            this.style.borderColor = 'black'
+            this.style.backgroundColor = 'blue'
+            this.classList.add("clicada");
+            
+        }
+    </script>
+
+</body>
+</html>
