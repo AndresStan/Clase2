@@ -1,6 +1,6 @@
 package Ej4;
 public class app {
-    
+
 
     static void main(String[] args) {
 
