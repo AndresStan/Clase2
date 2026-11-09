@@ -1,12 +1,15 @@
 
 let horario=[
             ["IPPE", "PROY", "IPPE", "AD", "SGE"],
+             ["RECREO","RECREO","RECREO","RECREO","RECREO"],
             ["DI", "SGE", "AD", "AD", "SGE"],
             ["RECREO","RECREO","RECREO","RECREO","RECREO"],
             ["DI", "SGE", "AD", "AD", "SASP"],
+             ["RECREO","RECREO","RECREO","RECREO","RECREO"],
             ["DWC", "PMDM", "PMDM", "PROY", "DI"],
             ["RECREO","RECREO","RECREO","RECREO","RECREO"],
             ["DWC", "PMDM", "PMDM", "PSP", "DI"],
+             ["RECREO","RECREO","RECREO","RECREO","RECREO"],
             ["DWC", "PMDM", "PMDM", "PSP", "DI"]
 ];
 
@@ -26,7 +29,7 @@ for (let index = 1; index <= totalFilas; index++) {
    if (horario[index-1][0].includes("RECREO")) {
     
       let duracionRecreo = parseInt(prompt("¿Cuántos minutos dura este recreo?"));
-
+      
       horas[index] = (primeraHora.getHours()+':'+primeraHora.getMinutes())
       primeraHora.setMinutes(primeraHora.getMinutes() + duracionRecreo)
       horas[index] = (horas[index]+'-'+primeraHora.getHours()+':'+primeraHora.getMinutes())
