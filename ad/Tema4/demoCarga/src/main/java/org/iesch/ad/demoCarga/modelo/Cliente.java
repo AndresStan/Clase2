@@ -2,11 +2,15 @@ package org.iesch.ad.demoCarga.modelo;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
+@Getter
+@Setter
 @Entity
-@Data
+
 public class Cliente {
 
     @Id
@@ -18,6 +22,12 @@ public class Cliente {
     @JoinColumn(name = "cliente_id")
     private List<Pedido> pedidos;
 
-
-
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", pedidos=" + pedidos +
+                '}';
+    }
 }
