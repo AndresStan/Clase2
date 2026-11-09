@@ -1,4 +1,4 @@
-    /* Ejercicio 4  */
+   /* Ejercicio 4  */
     function click1() {
         console.log(this);
         this.classList.add("hidden")
@@ -18,3 +18,7 @@
        elementosP[i].ondblclick = dblclick
         
     }
+
+
+
+    

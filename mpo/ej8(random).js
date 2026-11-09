@@ -1,12 +1,20 @@
 var colores = ["green", "blue", "yellow", "pink", "red", "purple"]
 
-function numeroAleatorio(min, max) { // Rnadom
-  return Math.round(Math.() * (max - min) + min);
+var boton = document.createElement("button")
+boton.addEventListener("click", mio)
+boton.innerText="Cambiar"
+boton.style="padding: 10px"
+document.body.appendChild(boton)
+
+
+
+function numeroAleatorio() { // Rnadom
+  return Math.floor(Math.round(Math.random()*5))
 }
 
 
 function mio() {
     
-    document.body.style.backgroundColor = colores[numeroAleatorio(1,5)];
+    document.body.style = `background-color: ${colores[numeroAleatorio()]}`;
     
 }
