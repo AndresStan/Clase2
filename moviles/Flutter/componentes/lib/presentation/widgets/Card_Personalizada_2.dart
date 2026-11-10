@@ -32,8 +32,8 @@ class CardTipo2 extends StatelessWidget {
           ),
           if ( texto != null )
             Container(
-              child: Text(texto!),
-                padding: EdgeInsets.all(20),              
+              padding: EdgeInsets.all(20),
+              child: Text(texto!),              
             )
         ],
       ),

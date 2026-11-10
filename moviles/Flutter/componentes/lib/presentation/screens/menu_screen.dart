@@ -18,20 +18,24 @@ class MenuScreen extends StatelessWidget {
       MenuOption(ruta: "buttons", icono: Icons.radio_button_on_rounded, nombre: "Botones"),
       MenuOption(ruta: "listview1", icono: Icons.list_alt, nombre: "ListView Tipo 1"),
       MenuOption(ruta: "listview2", icono: Icons.ac_unit, nombre: "ListView Tipo 2"),
-      MenuOption(ruta: "alert", icono: Icons.zoom_out_sharp, nombre: "Ventanas"),
+      MenuOption(ruta: "alert", icono: Icons.window, nombre: "Ventanas"),
       MenuOption(ruta: "card", icono: Icons.credit_card, nombre: "Cards"),
       MenuOption(ruta: "miWidget", icono: Icons.face, nombre: "Mi Widget"),
+      MenuOption(ruta: "slider", icono: Icons.slideshow_sharp, nombre: "Sliders && Checks"),
+      MenuOption(ruta: "snackbarscreen", icono: Icons.snapchat_outlined, nombre: "SnackBar Screen"),
+      MenuOption(ruta: "animatedscreen", icono: Icons.headset_off, nombre: "Animated Screen"),
     ];
 
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Componentes en Flutter"),
+        title: Text("Componentes en Flutter", style: TextStyle(color: const Color.fromARGB(255, 255, 255, 255))),
+        backgroundColor: colors.primary,
       ),
       body: ListView.separated(
         
         itemBuilder: (context, i) => ListTile(
-          leading: Icon(Icons.abc, color: colors.primary),
+          leading: Icon(menuOptions[i].icono),
           title: Text(menuOptions[i].nombre),
           onTap: () {
             /*

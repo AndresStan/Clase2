@@ -36,7 +36,6 @@ class AppTheme {
 
   // Tema light
   static final ThemeData lightTheme = ThemeData.light().copyWith(
-    useMaterial3: false,
     primaryColor: primary,
     appBarTheme: AppBarTheme(backgroundColor: primary, elevation: 0),
   );

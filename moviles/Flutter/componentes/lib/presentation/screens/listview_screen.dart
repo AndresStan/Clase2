@@ -14,8 +14,11 @@ class MiScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final colors = Theme.of(context).colorScheme;
+
     return Scaffold(
-      appBar: AppBar(title: Text("Listview Tipo 1")),
+      appBar: AppBar(title: Text("Listview Tipo 1", style: TextStyle(color: Colors.white),), backgroundColor: colors.primary,),
       body: ListView(
         children: [
           ...games.map(

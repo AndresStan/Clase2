@@ -11,6 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
+   
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
@@ -23,7 +26,10 @@ class MyApp extends StatelessWidget {
         "alert"     :(context) => AlertScreen(),
         "card"      :(context) => CardScreen(),
         "buttons"      :(context) => BotonesScreen(),
-        "miWidget"      :(context) => MiWidget()
+        "miWidget"      :(context) => MiWidget(),
+        "slider"      :(context) => SliderScreen(),
+        "snackbarscreen"      :(context) => SnackBarScreen(),
+        "animatedscreen"      :(context) => AnimatedScreen()
       },
       onGenerateRoute: (settings) => MaterialPageRoute(builder: (context) => CardScreen()),
       theme: AppTheme(colorSeleccionado: 1).getTheme()

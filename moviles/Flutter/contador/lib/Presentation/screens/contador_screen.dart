@@ -1,4 +1,3 @@
-import 'package:contador/Presentation/widgets/boton_personalizado.dart';
 import 'package:flutter/material.dart';
 
 class ContadorScreen extends StatefulWidget {

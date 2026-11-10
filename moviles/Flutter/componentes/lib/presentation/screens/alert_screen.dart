@@ -6,7 +6,8 @@ class AlertScreen extends StatelessWidget {
   const AlertScreen({super.key});
 
   void mostrarAlerta(BuildContext context) {
-    showCupertinoDialog(
+    showAdaptiveDialog(
+      barrierDismissible: true, // Al clicear fuera sales de la alert si/no
       context: context,
       builder: (context) {
         return AlertDialog(
@@ -18,7 +19,11 @@ class AlertScreen extends StatelessWidget {
               SizedBox(height: 20),
               FlutterLogo(size: 100,)
             ],
-          )
+          ),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(context), child: Text("Cancelar", style: TextStyle(color: Colors.red),)),
+            TextButton(onPressed: () => mostrarAlerta(context), child: Text("Mostrar"))
+          ],
         );
       },
     );
@@ -26,8 +31,14 @@ class AlertScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    final colors = Theme.of(context).colorScheme;
+
     return Scaffold(
-      appBar: AppBar(title: Text('Alertas')),
+      appBar: AppBar(
+        title: Text('Alertas', style: TextStyle(color: Colors.white)),
+        backgroundColor: colors.primary,
+        ),
       body: Center(
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(backgroundColor: AppTheme.primary),

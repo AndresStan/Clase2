@@ -24,12 +24,13 @@ class BotonesScreen extends StatelessWidget {
 }
 
 class _buttons extends StatelessWidget {
-  const new({
-    super.key,
-  });
+  const new();
 
   @override
   Widget build(BuildContext context) {
+
+  
+
     return SingleChildScrollView(
       child: SizedBox(
         width: double.infinity,

@@ -14,13 +14,18 @@ class MiWidget extends StatelessWidget {
   // Esta es una caja que guarda un número (empieza en 0) y avisa a la app cada vez que el número cambia
   final ValueNotifier<int> contadorClics = ValueNotifier<int>(0);
 
+  MiWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
+
+    final colors = Theme.of(context).colorScheme;
+    
     return Scaffold(
       // La barra superior de la aplicación, de color azul y con título
       appBar: AppBar(
-        title: const Text("Mi Widget"),
-        backgroundColor: Colors.blue,
+        title: const Text("Mi Widget", style: TextStyle(color: Colors.white),),
+        backgroundColor: colors.primary,
       ),
 
       // Centramos todo el contenido en el medio de la pantalla
