@@ -20,7 +20,8 @@ class _SliderScreenState extends State<SliderScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sliders & Checks", style: TextStyle(color: Colors.white)),
+        title: Text("Sliders & Checks"),
+        foregroundColor: Colors.white,
         backgroundColor: colors.primary,
       ),
       body: Column(

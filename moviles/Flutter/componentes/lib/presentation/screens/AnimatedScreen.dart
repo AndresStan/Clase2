@@ -39,7 +39,8 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Animated Screen", style: TextStyle(color: Colors.white)),
+        title: Text("Animated Screen"),
+        foregroundColor: Colors.white,
         backgroundColor: colors.primary,
       ),
       body: Center(

@@ -24,12 +24,14 @@ class MenuScreen extends StatelessWidget {
       MenuOption(ruta: "slider", icono: Icons.slideshow_sharp, nombre: "Sliders && Checks"),
       MenuOption(ruta: "snackbarscreen", icono: Icons.snapchat_outlined, nombre: "SnackBar Screen"),
       MenuOption(ruta: "animatedscreen", icono: Icons.headset_off, nombre: "Animated Screen"),
+      MenuOption(ruta: "formularioscreen", icono: Icons.nfc_sharp, nombre: "Formulario Screen"),
     ];
 
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Componentes en Flutter", style: TextStyle(color: const Color.fromARGB(255, 255, 255, 255))),
+        title: Text("Componentes en Flutter"),
+        foregroundColor: Colors.white,
         backgroundColor: colors.primary,
       ),
       body: ListView.separated(

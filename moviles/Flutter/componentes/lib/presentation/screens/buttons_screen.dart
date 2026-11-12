@@ -7,9 +7,15 @@ class BotonesScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+
+    final colors = Theme.of(context).colorScheme;
+
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Botones"),
+        foregroundColor: Colors.white,
+        backgroundColor: colors.primary
       ),
 
       body: _buttons(),
@@ -29,7 +35,7 @@ class _buttons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-  
+
 
     return SingleChildScrollView(
       child: SizedBox(

@@ -29,7 +29,8 @@ class MyApp extends StatelessWidget {
         "miWidget"      :(context) => MiWidget(),
         "slider"      :(context) => SliderScreen(),
         "snackbarscreen"      :(context) => SnackBarScreen(),
-        "animatedscreen"      :(context) => AnimatedScreen()
+        "animatedscreen"      :(context) => AnimatedScreen(),
+        "formularioscreen"      :(context) => FormularioScreen()
       },
       onGenerateRoute: (settings) => MaterialPageRoute(builder: (context) => CardScreen()),
       theme: AppTheme(colorSeleccionado: 1).getTheme()

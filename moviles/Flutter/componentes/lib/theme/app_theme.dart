@@ -26,6 +26,35 @@ class AppTheme {
     hoverColor: listaColores[colorSeleccionado],
     appBarTheme: AppBarTheme(
       centerTitle: true,
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+
+      floatingLabelStyle: TextStyle(
+        color: listaColores[colorSeleccionado]
+      ),
+
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: listaColores[colorSeleccionado]
+        ),
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(10),
+          topRight: Radius.circular(10)
+        )
+
+      ),
+
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: listaColores[colorSeleccionado]
+        ),
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(10),
+          topRight: Radius.circular(10),
+        )
+      ),
+
+      
     )
   );
 

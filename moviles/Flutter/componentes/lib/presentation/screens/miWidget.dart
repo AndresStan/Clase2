@@ -6,10 +6,8 @@ import 'package:animate_do/animate_do.dart';
 // Mi widget ValueListenableBuilder
 // Es un widget que se queda esperando a escuchar lo que le enviemos
 
-// Para este widget deberemos instalar "flutter pub add animate_do" en la terminal para traernos las dependencias
-// Con su import: import 'package:animate_do/animate_do.dart';
 
-// Creamos una pantalla normal de las que no se recargan solas (StatelessWidget)
+// Creamos una pantalla normal de las que no se recargan solas 
 class MiWidget extends StatelessWidget {
   // Esta es una caja que guarda un número (empieza en 0) y avisa a la app cada vez que el número cambia
   final ValueNotifier<int> contadorClics = ValueNotifier<int>(0);
@@ -24,7 +22,8 @@ class MiWidget extends StatelessWidget {
     return Scaffold(
       // La barra superior de la aplicación, de color azul y con título
       appBar: AppBar(
-        title: const Text("Mi Widget", style: TextStyle(color: Colors.white),),
+        title: const Text("Mi Widget"),
+        foregroundColor: Colors.white,
         backgroundColor: colors.primary,
       ),
 

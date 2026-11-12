@@ -24,7 +24,10 @@ class SnackBarScreen extends StatelessWidget {
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text("SnackBar", style: TextStyle(color: Colors.white)), backgroundColor: colors.primary,),
+      appBar: AppBar(title: Text("SnackBar"),
+       backgroundColor: colors.primary,
+       foregroundColor: Colors.white,
+       ),
 
       floatingActionButton: FloatingActionButton.extended(
         icon: Icon(Icons.access_time_rounded),

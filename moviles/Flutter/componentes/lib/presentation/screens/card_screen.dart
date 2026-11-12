@@ -11,7 +11,7 @@ class CardScreen extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
 
     return Scaffold(
-      appBar: AppBar(title: Text("Tarjetas", style: TextStyle(color: Colors.white),), backgroundColor: colors.primary,),
+      appBar: AppBar(title: Text("Tarjetas"), backgroundColor: colors.primary, foregroundColor: Colors.white,),
       body: ListView(
         padding: EdgeInsetsGeometry.symmetric(horizontal: 20, vertical: 10),
         children: [

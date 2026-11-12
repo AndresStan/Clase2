@@ -36,8 +36,9 @@ class AlertScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Alertas', style: TextStyle(color: Colors.white)),
+        title: Text('Alertas'),
         backgroundColor: colors.primary,
+        foregroundColor: Colors.white,
         ),
       body: Center(
         child: ElevatedButton(
