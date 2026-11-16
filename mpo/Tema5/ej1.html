@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <!--. Realiza un formulario donde se pueda introducir y enviar un DNI con letra. El formulario
+deberá validar si la letra es correcta al:
+Ejer 1-a) Perder el foco del campo de texto donde se introduce el DNI.
+Ejer 1-b) Enviar el formulario, cancelando el envío si el formato no es correcto. 
+-->
+    <form action="">
+        <label for="DNI">DNI</label>
+        <input id="form" type="text">
+        <input type="button" id="boton" value="enviar">
+    </form>
+    <div id="miDiv">
+        
+    </div>
+
+</body>
+
+<script>
+    var form = document.getElementById("form")
+    var boton = document.getElementById("boton")
+    boton.addEventListener("click", ej1)
+    form.addEventListener("focusout", ej1)
+
+    const letrasDNI = [
+        'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B',
+        'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'
+    ];
+
+    var div = document.createElement("div")
+
+    function ej1(params) {
+        
+       
+        var texto = document.createElement("span")
+        var dni = (form.value)
+        console.log(dni);
+
+  
+
+        // nada de replace porque necesito validar la letra
+        dni = dni.replace(/\D/g, "")
+        div.innerHTML=""
+        texto.innerText=dni
+
+        var indice = dni%23
+
+        div.appendChild(texto) 
+        document.body.appendChild(div)
+            
+        
+
+        
+    
+
+    
+
+
+    }
+
+
+</script>
+
+</html>
