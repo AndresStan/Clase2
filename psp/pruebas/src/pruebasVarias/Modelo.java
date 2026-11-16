@@ -15,7 +15,7 @@ public class Modelo {
            }
            numero++;
            System.out.println("Numero aumentado, actualmente "  + this.numero);
-           notifyAll();
+           notifyAll(); 
 
        } catch (InterruptedException e){
            System.out.println(e);
