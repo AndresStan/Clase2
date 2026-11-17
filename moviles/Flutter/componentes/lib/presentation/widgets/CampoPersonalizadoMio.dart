@@ -9,11 +9,22 @@ class CampoPersonalizadoMio extends StatelessWidget {
   final String? counterText;
   final TextInputType? keyboardType;
   final bool obscureText;
+  final Map<String, String> formValues;
+  final String formProperty;
 
-  const new({super.key, this.obscureText = false, this.hintText, this.labelText, this.helperText, this.icon, this.suffixIcon, this.counterText, this.keyboardType});
-
-  
- 
+  const new({
+    super.key,
+    this.hintText,
+    this.labelText,
+    this.helperText,
+    this.icon,
+    this.suffixIcon,
+    this.counterText,
+    this.keyboardType,
+    this.obscureText = false,
+    required this.formValues,
+    required this.formProperty,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +34,7 @@ class CampoPersonalizadoMio extends StatelessWidget {
       initialValue: "",
       textCapitalization: .words,
       onChanged: (value) {
-        print(value);
+        formValues[formProperty] = value;
       },
       validator: (value) {
         if (value == null) {
@@ -38,9 +49,9 @@ class CampoPersonalizadoMio extends StatelessWidget {
         labelText: labelText,
         helperText: helperText,
         counterText: counterText,
-        suffixIcon: suffixIcon == null ? null: Icon(suffixIcon),
+        suffixIcon: suffixIcon == null ? null : Icon(suffixIcon),
         //prefixIcon: Icon(Icons.group),
-        icon: icon == null? null: Icon(icon)
+        icon: icon == null ? null : Icon(icon),
         /*  Esto comentadico porque lo hago en AppTheme
     
         border: OutlineInputBorder(
