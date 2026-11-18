@@ -16,7 +16,6 @@ QComboBox:on {
 
 QTabBar{
     background-color: black;
-    
 }
 
 QSlider::handle{

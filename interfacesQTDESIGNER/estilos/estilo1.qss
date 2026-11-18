@@ -7,7 +7,8 @@ QLabel {
 
 
 
-/* #NOMBRE para aplicar a un solo nombre */
+/* #NOMBRE para aplicar a un solo nombre (IMPORTANTE EN EL self.lineEdit.setObjectName("lineEdit") para que funcione)*/
+
 QPushButton#pushButton_2 {
     border: 5px solid orange;
     border-style: dotted;

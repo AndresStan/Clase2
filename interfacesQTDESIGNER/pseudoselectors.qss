@@ -1,0 +1,138 @@
+/* Pertenece a una ventana activa. */
+QWidget:active { 
+    background-color: #2b2b2b; 
+}
+
+/* Está habilitado para interactuar. */
+QWidget:enabled { 
+    color: #ffffff; 
+}
+
+/* Está deshabilitado (no interactivo). */
+QWidget:disabled { 
+    color: #666666; 
+}
+
+/* Tiene el foco del teclado actualmente. */
+QLineEdit:focus { 
+    border: 1px solid #3498db; 
+}
+
+/* El cursor del ratón está situado encima. */
+QPushButton:hover { 
+    background-color: #2980b9; 
+}
+
+/* Está siendo presionado con el ratón. */
+QPushButton:pressed { 
+    background-color: #1f618d; 
+}
+
+
+/* Está marcado. */
+QCheckBox:checked { 
+    color: #2ecc71; 
+}
+
+/* NO está marcado. */
+QCheckBox:unchecked { 
+    color: #e74c3c; 
+}
+
+/* Está en estado indeterminado (parcialmente marcado). */
+QCheckBox:indeterminate { 
+    color: #f39c12; 
+}
+
+/* Está seleccionado (ítems en listas, tablas o pestañas). */
+QListView::item:selected { 
+    background-color: #3498db; 
+}
+
+
+/* Es de solo lectura. */
+QLineEdit:read-only { 
+    background-color: #333333; 
+}
+
+/* Es editable. */
+QComboBox:editable { 
+    background-color: #ffffff; 
+}
+
+/* Está desplegado o abierto. */
+QComboBox:open { 
+    border-color: #f1c40f; 
+}
+
+/* Está colapsado o cerrado. */
+QComboBox:closed { 
+    border-color: #bdc3c7; 
+}
+
+/* Está encendido o activo. */
+QPushButton:on { 
+    background-color: #27ae60; 
+}
+
+/* Está apagado o inactivo. */
+QPushButton:off { 
+    background-color: #c0392b; 
+}
+
+/* Tiene orientación horizontal. */
+QScrollBar:horizontal { 
+    height: 12px; 
+}
+
+/* Tiene orientación vertical. */
+QScrollBar:vertical { 
+    width: 12px; 
+}
+
+/* Es el primer elemento de una secuencia o grupo. */
+QTabBar::tab:first { 
+    border-top-left-radius: 4px; 
+}
+
+/* Es el último elemento de una secuencia o grupo. */
+QTabBar::tab:last { 
+    border-top-right-radius: 4px; 
+}
+
+/* Está en una posición intermedia dentro de un grupo. */
+QToolButton:middle { 
+    border-radius: 0px; 
+}
+
+/* Es el único elemento presente en su grupo o contenedor. */
+QTabBar::tab:only-one { 
+    border-radius: 4px; 
+}
+
+
+/* Actúa como una ventana de nivel superior (top-level). */
+QWidget:window { 
+    border: 2px solid #2c3e50; 
+}
+
+/* Es plano. */
+QPushButton:flat { 
+    border: none; 
+}
+
+/* Es el predeterminado en un diálogo. */
+QPushButton:default { 
+    border: 2px solid #2980b9; 
+}
+
+/* Muestra una apariencia hundida. */
+QAbstractButton:sunken { 
+    padding: 2px; 
+}
+
+/* Muestra una apariencia elevada. */
+QAbstractButton:raised { 
+    padding: 0px; 
+}
+
