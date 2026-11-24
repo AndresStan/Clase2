@@ -3,12 +3,19 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Cliente {
+
+
+
     static void main(String[] args) {
 
+
         boolean parar = false;
+        String variableDeParada = "CAMBIO";
+
 
        try(
                Socket socket = new Socket("localhost", 8081);
@@ -20,12 +27,31 @@ public class Cliente {
        ) {
 
 
+          String respuesta = "";
+          while (!parar){
 
-          while (socket.getKeepAlive()){
+              while (!Objects.equals(respuesta = entrada.readLine(), variableDeParada)) {
 
-              System.out.println(entrada.readLine());
-              String respuesta = scanner.nextLine();
-              salida.println(respuesta);
+                  if (Objects.equals(respuesta, "APAGAR")){
+                      return;
+                  }
+                  System.out.println(respuesta);
+                  respuesta = "";
+
+              }
+              respuesta = "";
+
+
+
+              String respuestaEnviada = scanner.nextLine();
+              try {
+                  Integer.parseInt(respuestaEnviada);
+              } catch (NumberFormatException e) {
+                  respuestaEnviada = "99";
+              }
+
+
+              salida.println(respuestaEnviada);
 
           }
 

@@ -1,14 +1,19 @@
 import java.io.File;
 import java.io.IOException;
 import java.net.ServerSocket;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Stream;
 
 public class Servidor {
 
 
     int port = 8081;
     static Path directorio = Path.of("src/main/java/media");
+
+    // variable que indica la parada
     static boolean[] parada = {false};
 
 
@@ -17,14 +22,12 @@ public class Servidor {
 
         try (ServerSocket serverSocket = new ServerSocket(8081)) {
 
-            // variable que indica la parada
 
             // Servidor saca que inicializa
             System.out.println("Server Started on " + serverSocket.getLocalPort() + " at " + LocalDateTime.now());
 
             while (!parada[0]){
                 try {
-
                     new Thread(new ServidorThread(serverSocket.accept(), parada, new Servidor())).start();
 
                 } catch (IOException e) {
@@ -43,7 +46,14 @@ public class Servidor {
         String rutaCompleta = directorio.toString() + "/" + nombreFichero;
         File file = new File(rutaCompleta);
         System.out.println(file.exists());
-        return "";
+        try {
+            return Files.readString(file.toPath());
+        } catch (IOException e) {
+            return e.toString();
+        }
     }
 
+    public List<Path> listarFicheros() throws IOException {
+            return Files.list(directorio).toList();
+    }
 }
