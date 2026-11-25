@@ -9,39 +9,24 @@ import java.util.stream.Stream;
 
 public class Servidor {
 
-
-    int port = 8081;
     static Path directorio = Path.of("src/main/java/media");
-
     // variable que indica la parada
     static boolean[] parada = {false};
-
-
     static void main() {
-
-
         try (ServerSocket serverSocket = new ServerSocket(8081)) {
-
-
             // Servidor saca que inicializa
             System.out.println("Server Started on " + serverSocket.getLocalPort() + " at " + LocalDateTime.now());
-
             while (!parada[0]){
                 try {
-                    new Thread(new ServidorThread(serverSocket.accept(), parada, new Servidor())).start();
-
+                    new Thread(new ServidorThread(serverSocket.accept(), new Servidor())).start();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
             }
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
-
     }
-
     public synchronized String mostrarFichero(String nombreFichero){
         String rutaCompleta = directorio.toString() + "/" + nombreFichero;
         File file = new File(rutaCompleta);
@@ -52,7 +37,6 @@ public class Servidor {
             return e.toString();
         }
     }
-
     public List<Path> listarFicheros() throws IOException {
             return Files.list(directorio).toList();
     }

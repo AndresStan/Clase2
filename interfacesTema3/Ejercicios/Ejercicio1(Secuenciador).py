@@ -99,7 +99,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         
         
-        self.cargardatos()
+        self.cargarPrimero()
         self.pushButton_4.pressed.connect(self.cargarUltimo)
         self.pushButton.pressed.connect(self.cargarPrimero)
         self.pushButton_3.pressed.connect(self.cargarSiguiente)
@@ -116,16 +116,7 @@ class Ui_MainWindow(object):
         self.pushButton_3.setText(_translate("MainWindow", ">"))
         self.pushButton_4.setText(_translate("MainWindow", ">>"))
         
-    def cargardatos(self):
-            cursor=self.con.cursor()
-            sql="select * from capitales"
-            cursor.execute(sql)
-            resultado=cursor.fetchall()
-            self.lineEdit.setText(str(resultado[0][0]))
-            self.lineEdit_2.setText(str(resultado[0][1]))
-            self.lineEdit_3.setText(str(resultado[0][2]))
-            cursor.close()
-            
+ 
             
     def cargarUltimo(self):
             cursor=self.con.cursor()
@@ -134,9 +125,9 @@ class Ui_MainWindow(object):
             resultado=cursor.fetchall()
             self.contador = len(resultado)-1
             print(self.contador)
-            self.lineEdit.setText(str(resultado[len(resultado)-1][0]))
-            self.lineEdit_2.setText(str(resultado[len(resultado)-1][1]))
-            self.lineEdit_3.setText(str(resultado[len(resultado)-1][2]))
+            self.lineEdit.setText(str(resultado[self.contador][0]))
+            self.lineEdit_2.setText(str(resultado[self.contador][1]))
+            self.lineEdit_3.setText(str(resultado[self.contador][2]))
             cursor.close()
             
     def cargarPrimero(self):
@@ -146,9 +137,9 @@ class Ui_MainWindow(object):
                 resultado=cursor.fetchall()
                 self.contador = 0
                 print(self.contador)
-                self.lineEdit.setText(str(resultado[0][0]))
-                self.lineEdit_2.setText(str(resultado[0][1]))
-                self.lineEdit_3.setText(str(resultado[0][2]))
+                self.lineEdit.setText(str(resultado[self.contador][0]))
+                self.lineEdit_2.setText(str(resultado[self.contador][1]))
+                self.lineEdit_3.setText(str(resultado[self.contador][2]))
                 cursor.close()
     
     def cargarSiguiente(self):

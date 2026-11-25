@@ -7,16 +7,9 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Cliente {
-
-
-
     static void main(String[] args) {
-
-
         boolean parar = false;
         String variableDeParada = "CAMBIO";
-
-
        try(
                Socket socket = new Socket("localhost", 8081);
                // Para enviar
@@ -25,46 +18,21 @@ public class Cliente {
                BufferedReader entrada = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                Scanner scanner = new Scanner(System.in);
        ) {
-
-
           String respuesta = "";
           while (!parar){
-
               while (!Objects.equals(respuesta = entrada.readLine(), variableDeParada)) {
-
                   if (Objects.equals(respuesta, "APAGAR")){
                       return;
                   }
                   System.out.println(respuesta);
                   respuesta = "";
-
               }
               respuesta = "";
-
-
-
               String respuestaEnviada = scanner.nextLine();
-              try {
-                  Integer.parseInt(respuestaEnviada);
-              } catch (NumberFormatException e) {
-                  respuestaEnviada = "99";
-              }
-
-
               salida.println(respuestaEnviada);
-
           }
-
-
-
-
-
-
-
-
        } catch (IOException e) {
            throw new RuntimeException(e);
        }
-
     }
 }

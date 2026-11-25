@@ -8,31 +8,31 @@ import java.nio.file.Path;
 public class ServidorThread implements Runnable{
 
     private Socket socket;
-    private boolean[] parada;
+
     private Servidor servidor;
 
-    public ServidorThread(Socket socket, boolean[] parada, Servidor servidor) {
+    public ServidorThread(Socket socket, Servidor servidor) {
         this.socket = socket;
-        this.parada = parada;
         this.servidor = servidor;
     }
-
     @Override
     public void run() {
-        // Salida
-
-
         try (
                 PrintWriter salida = new PrintWriter(socket.getOutputStream(), true);
                 BufferedReader entrada = new BufferedReader(new InputStreamReader(socket.getInputStream()))
         ) {
             salida.println("Elige una opcion: (1 - Para Listar) (2 - Para mostrar) (3 - Para Salir)");
             salida.println("CAMBIO");
+            while (!Servidor.parada[0]){
 
-            while (!parada[0]){
+                int caso;
+                try {
+                    caso = Integer.parseInt(entrada.readLine());
+                } catch (NumberFormatException e) {
+                    caso = 99;
+                }
 
-
-                switch (Integer.parseInt(entrada.readLine())){
+                switch (caso){
                     case 1:
                         salida.println("A continuacion te muestro los ficheros:");
                         for (Path nombre : servidor.listarFicheros()){
@@ -57,7 +57,6 @@ public class ServidorThread implements Runnable{
                         this.socket.close();
 
 
-
                     default:
                         salida.println("Porfavor indica un valor valido");
                         salida.println("Elige una opcion: (1 - Para Listar) (2 - Para mostrar) (3 - Para Salir)");
@@ -66,7 +65,7 @@ public class ServidorThread implements Runnable{
                 }
             }
         } catch (IOException e) {
-            System.out.println("Servidor cerrado");
+            System.out.println("Comunicacion cerrado");
         }
     }
 }
