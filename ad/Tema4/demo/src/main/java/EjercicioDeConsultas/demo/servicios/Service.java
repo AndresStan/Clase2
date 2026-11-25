@@ -38,9 +38,6 @@ public class Service {
 
 
     public List<Object> clientesConMasCoches() {
-
-
-         clienteRepository.buscarPorMayorCantidadDeTenienteDeCoches();
-
+        clienteRepository.buscarPorMayorCantidadDeTenienteDeCoches();
     }
 }
