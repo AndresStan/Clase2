@@ -1,9 +1,10 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import modelo.Imagen;
+
+import java.io.*;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -12,6 +13,9 @@ public class Cliente {
 
         String variableDeCambio = "CAMBIO";
         String variableDeParada = "CORTO";
+        String variableDeImagen = "IMAGEN";
+        String variableDeImagenStop = "IMAGENSTOP";
+
 
         try (
                 Socket socket = new Socket("localhost", 8081);
@@ -19,6 +23,9 @@ public class Cliente {
                 PrintWriter salida = new PrintWriter(socket.getOutputStream(), true);
                 // Entrada
                 BufferedReader entrada = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                // Entrada objeto
+                ObjectInputStream entradaObjeto = new ObjectInputStream(socket.getInputStream());
+
                 // Scanner
                 Scanner sc = new Scanner(System.in);
         ) {
@@ -33,7 +40,15 @@ public class Cliente {
                     if (Objects.equals(respuesta, variableDeParada)){
                         return;
                     } else {
-                        System.out.println(respuesta);
+
+                        if (respuesta.equals(variableDeImagen)){
+                            Imagen imagen = (Imagen) entradaObjeto.readObject();
+                            Path archivo = Path.of("src/main/java/mediaCliente").resolve(imagen.getNombre());
+                            Files.write(archivo, imagen.getDatos());
+                        } else {
+                            System.out.println(respuesta);
+                        }
+
                     }
                 }
 
@@ -46,6 +61,9 @@ public class Cliente {
 
 
         } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            System.out.println("Ha ocurrido un error al guardar la imagen");
             throw new RuntimeException(e);
         }
 
