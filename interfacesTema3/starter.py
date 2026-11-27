@@ -1,5 +1,5 @@
 import mysql.connector
-from Ejercicios.Ej import Ui_MainWindow
+from Ejercicios.Ejercicio5SecuenciadorMultiTabla import Ui_MainWindow
 from PyQt6.QtWidgets import QMainWindow, QApplication
 
 class MainWindow(QMainWindow, Ui_MainWindow):
